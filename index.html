@@ -8,6 +8,9 @@
     <!-- Google Fonts for Urdu -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700;900&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <style>
         /* ===== RESET ===== */
         * {
@@ -137,6 +140,8 @@
             width: calc(100% - 220px);
             min-height: 100vh;
             background: #ffffff;
+            display: flex;
+            flex-direction: column;
         }
 
         /* ===== TOP NAVBAR - CENTER LOGO ===== */
@@ -191,7 +196,7 @@
             border-radius: 2px;
         }
 
-        /* ===== SLIDER SECTION - WITH GAP ===== */
+        /* ===== SLIDER SECTION ===== */
         .slider-section {
             background: #ffffff;
             padding: 30px 20px;
@@ -225,7 +230,6 @@
             display: block;
         }
 
-        /* Slide Overlay Text - NO BACKGROUND */
         .slide-overlay {
             position: absolute;
             top: 50%;
@@ -234,9 +238,7 @@
             color: white;
             text-align: center;
             width: 90%;
-            /* NO BACKGROUND COLOR */
             padding: 20px 25px;
-            /* NO BACKGROUND, NO BLUR */
         }
 
         .slide-overlay h2 {
@@ -255,7 +257,6 @@
             text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
         }
 
-        /* Slider Buttons */
         .slider-btn {
             position: absolute;
             top: 50%;
@@ -289,7 +290,6 @@
             right: 15px;
         }
 
-        /* Dots */
         .slider-dots {
             display: flex;
             justify-content: center;
@@ -316,6 +316,108 @@
 
         .dot:hover {
             background: #1a5c3a;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #1a5c3a;
+            color: #ffffff;
+            padding: 40px 30px 20px;
+            margin-top: auto;
+            border-top: 4px solid #f4a51c;
+        }
+
+        .footer-container {
+            max-width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #f4a51c;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #f4a51c;
+            margin-top: 5px;
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #c8e6d0;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #c8e6d0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-column ul li a:hover {
+            color: #f4a51c;
+            padding-right: 5px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .footer-social a:hover {
+            background: #f4a51c;
+            color: #1a5c3a;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #a8d5b8;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-bottom span {
+            color: #f4a51c;
         }
 
         /* ===== RESPONSIVE ===== */
@@ -366,10 +468,6 @@
                 height: 220px;
             }
 
-            .slide-overlay {
-                padding: 15px 20px;
-            }
-
             .slide-overlay h2 {
                 font-size: 22px;
             }
@@ -383,6 +481,11 @@
                 height: 36px;
                 font-size: 16px;
                 padding: 8px 12px;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
         }
 
@@ -422,11 +525,6 @@
                 height: 180px;
             }
 
-            .slide-overlay {
-                padding: 10px 15px;
-                width: 92%;
-            }
-
             .slide-overlay h2 {
                 font-size: 17px;
             }
@@ -458,6 +556,32 @@
             .slider-dots {
                 padding: 10px 0;
                 gap: 6px;
+            }
+
+            .footer {
+                padding: 30px 15px 15px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .footer-column h3 {
+                font-size: 16px;
+            }
+
+            .footer-column p,
+            .footer-column ul li a {
+                font-size: 13px;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                font-size: 12px;
             }
         }
     </style>
@@ -513,13 +637,12 @@
             </a>
         </nav>
 
-        <!-- ===== SLIDER SECTION ===== -->
+        <!-- SLIDER SECTION -->
         <section class="slider-section">
             <div class="slider-container">
                 
                 <div class="slider-wrapper" id="sliderWrapper">
                     
-                    <!-- Slide 1: Poor Person -->
                     <div class="slide">
                         <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200" alt="Poor Person">
                         <div class="slide-overlay">
@@ -528,7 +651,6 @@
                         </div>
                     </div>
 
-                    <!-- Slide 2: Development -->
                     <div class="slide">
                         <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1200" alt="Development">
                         <div class="slide-overlay">
@@ -537,7 +659,6 @@
                         </div>
                     </div>
 
-                    <!-- Slide 3: Education -->
                     <div class="slide">
                         <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200" alt="Education">
                         <div class="slide-overlay">
@@ -546,7 +667,6 @@
                         </div>
                     </div>
 
-                    <!-- Slide 4: Unity -->
                     <div class="slide">
                         <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200" alt="Unity">
                         <div class="slide-overlay">
@@ -557,13 +677,11 @@
 
                 </div>
 
-                <!-- Buttons -->
                 <button class="slider-btn prev" id="prevBtn">❮</button>
                 <button class="slider-btn next" id="nextBtn">❯</button>
 
             </div>
 
-            <!-- Dots -->
             <div class="slider-dots" id="dotsContainer">
                 <span class="dot active" data-index="0"></span>
                 <span class="dot" data-index="1"></span>
@@ -571,6 +689,65 @@
                 <span class="dot" data-index="3"></span>
             </div>
         </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="footer-container">
+                
+                <!-- Column 1: About -->
+                <div class="footer-column">
+                    <h3>🇵🇰 AamadmiPakistan</h3>
+                    <p>عوام کی طاقت، عوام کا اختیار</p>
+                    <p style="margin-top: 8px; font-size: 13px; color: #a8d5b8;">
+                        پاکستان کی ترقی اور عوام کی فلاح کے لیے ہماری کوششیں جاری ہیں۔ ہر طبقے کو ساتھ لے کر چلنے والی پارٹی۔
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-column">
+                    <h3>📌 Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Manifesto</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-column">
+                    <h3>📞 Contact</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-phone" style="margin-left: 8px;"></i> +92 300 1234567</a></li>
+                        <li><a href="#"><i class="fas fa-envelope" style="margin-left: 8px;"></i> info@aamadmipakistan.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt" style="margin-left: 8px;"></i> Islamabad, Pakistan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Social -->
+                <div class="footer-column">
+                    <h3>🌐 Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #a8d5b8;">
+                        سوشل میڈیا پر ہم سے جڑیں اور تازہ ترین خبریں حاصل کریں۔
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 <span>AamadmiPakistan</span> - All Rights Reserved. <br>
+                عوام کی طاقت، عوام کا اختیار
+            </div>
+        </footer>
 
     </div>
 
