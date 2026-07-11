@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AamadmiPakistan - Manifesto</title>
+    
+    <!-- Google Fonts for Urdu -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+        }
+
+        /* ===== LEFT VERTICAL NAVBAR ===== */
+        .left-navbar {
+            width: 220px;
+            height: 100vh;
+            background: #1a5c3a;
+            box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            border-right: 3px solid #f4a51c;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px 20px 20px;
+            border-bottom: 2px solid #f4a51c;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #f4a51c;
+            object-fit: cover;
+        }
+
+        .sidebar-logo .logo-text {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .sidebar-logo .logo-text span {
+            color: #f4a51c;
+        }
+
+        .sidebar-logo .logo-sub-text {
+            color: #a8d5b8;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 5px 15px;
+            gap: 2px;
+            flex: 1;
+        }
+
+        .nav-section-label {
+            color: #a8d5b8;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 12px 10px 5px 10px;
+            text-align: left;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-links a:hover {
+            background: rgba(244, 165, 28, 0.2);
+            color: #f4a51c;
+            border-left-color: #f4a51c;
+            transform: translateX(3px);
+        }
+
+        .nav-links a.active {
+            background: rgba(244, 165, 28, 0.25);
+            color: #f4a51c;
+            border-left-color: #f4a51c;
+            font-weight: 700;
+        }
+
+        .nav-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            margin-left: 220px;
+            width: calc(100% - 220px);
+            min-height: 100vh;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== TOP NAVBAR ===== */
+        .top-navbar {
+            background: #ffffff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 998;
+            border-bottom: 3px solid #1a5c3a;
+        }
+
+        .center-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            border: 4px solid #1a5c3a;
+            box-shadow: 0 4px 15px rgba(26, 92, 58, 0.3);
+        }
+
+        .logo-sub {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 16px;
+            color: #1a5c3a;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-top: 6px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .logo-sub::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: #f4a51c;
+            margin: 4px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ===== SLIDER SECTION ===== */
+        .slider-section {
+            background: #ffffff;
+            padding: 30px 20px;
+            margin: 0;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 325px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            width: 90%;
+            padding: 20px 25px;
+        }
+
+        .slide-overlay h2 {
+            font-size: 32px;
+            font-weight: 900;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            margin-bottom: 5px;
+        }
+
+        .slide-overlay p {
+            font-size: 18px;
+            margin-top: 5px;
+            opacity: 0.95;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(26, 92, 58, 0.8);
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 10;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: #f4a51c;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-btn.prev {
+            left: 15px;
+        }
+
+        .slider-btn.next {
+            right: 15px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 0;
+            background: #ffffff;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .dot.active {
+            background: #1a5c3a;
+            border-color: #f4a51c;
+            transform: scale(1.2);
+        }
+
+        .dot:hover {
+            background: #1a5c3a;
+        }
+
+        /* ===== MANIFESTO CONTENT ===== */
+        .page-content {
+            padding: 40px 30px;
+            background: #ffffff;
+            flex: 1;
+        }
+
+        .page-content .content-box {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-content h1 {
+            font-size: 32px;
+            color: #1a5c3a;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-content h1::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #f4a51c;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Main Accordion */
+        .main-accordion {
+            border: 2px solid #1a5c3a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 20px 30px;
+            background: #1a5c3a;
+            border: none;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: #0f4a2a;
+        }
+
+        .accordion-header i {
+            font-size: 24px;
+            color: #f4a51c;
+            transition: transform 0.4s ease;
+        }
+
+        .accordion-header .arrow-icon {
+            transition: transform 0.4s ease;
+        }
+
+        .accordion-header.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s ease, padding 0.4s ease;
+            background: #ffffff;
+        }
+
+        .accordion-content.open {
+            max-height: 20000px;
+            padding: 10px 0;
+        }
+
+        .accordion-content-inner {
+            padding: 20px 30px 30px;
+        }
+
+        /* ===== MANIFESTO POINTS - Text Left, Number Right ===== */
+        .manifesto-point {
+            display: flex;
+            gap: 15px;
+            padding: 12px 18px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            border-right: 4px solid #f4a51c;
+            align-items: center;
+            transition: all 0.2s ease;
+            direction: ltr;
+            justify-content: space-between;
+        }
+
+        .manifesto-point:hover {
+            background: #eef3f0;
+            transform: translateX(3px);
+        }
+
+        .manifesto-point .point-number {
+            background: #1a5c3a;
+            color: #ffffff;
+            min-width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            order: 1;
+        }
+
+        .manifesto-point .point-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-align: right;
+            flex: 1;
+            order: 0;
+        }
+
+        .manifesto-point .point-text strong {
+            color: #1a5c3a;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #1a5c3a;
+            color: #ffffff;
+            padding: 40px 30px 20px;
+            margin-top: auto;
+            border-top: 4px solid #f4a51c;
+        }
+
+        .footer-container {
+            max-width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #f4a51c;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-column h3 i {
+            margin-left: 8px;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #f4a51c;
+            margin-top: 5px;
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #c8e6d0;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #c8e6d0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-column ul li a i {
+            margin-left: 8px;
+            width: 20px;
+            color: #f4a51c;
+        }
+
+        .footer-column ul li a:hover {
+            color: #f4a51c;
+            padding-right: 5px;
+        }
+
+        .footer-quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin-top: 5px;
+        }
+
+        .footer-quick-links a {
+            color: #c8e6d0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-quick-links a i {
+            margin-left: 6px;
+            color: #f4a51c;
+            font-size: 13px;
+        }
+
+        .footer-quick-links a:hover {
+            color: #f4a51c;
+            transform: translateX(3px);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .footer-social a:hover {
+            background: #f4a51c;
+            color: #1a5c3a;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #a8d5b8;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-bottom span {
+            color: #f4a51c;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .left-navbar {
+                width: 60px;
+                padding: 10px 0;
+            }
+
+            .sidebar-logo {
+                padding: 5px 5px 10px 5px;
+            }
+
+            .sidebar-logo img {
+                width: 35px;
+                height: 35px;
+                border-width: 2px;
+            }
+
+            .sidebar-logo .logo-text,
+            .sidebar-logo .logo-sub-text,
+            .nav-section-label,
+            .nav-links a .link-text {
+                display: none;
+            }
+
+            .nav-links {
+                padding: 5px 5px;
+                gap: 3px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+                padding: 10px 6px;
+                justify-content: center;
+            }
+
+            .main-content {
+                margin-left: 60px;
+                width: calc(100% - 60px);
+            }
+
+            .slider-section {
+                padding: 20px 15px;
+            }
+
+            .slide img {
+                height: 220px;
+            }
+
+            .slide-overlay h2 {
+                font-size: 22px;
+            }
+
+            .slide-overlay p {
+                font-size: 15px;
+            }
+
+            .slider-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+                padding: 8px 12px;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .page-content {
+                padding: 30px 15px;
+            }
+
+            .page-content h1 {
+                font-size: 26px;
+            }
+
+            .accordion-header {
+                font-size: 18px;
+                padding: 15px 20px;
+            }
+
+            .manifesto-point .point-text {
+                font-size: 14px;
+            }
+
+            .manifesto-point {
+                padding: 10px 14px;
+            }
+
+            .manifesto-point .point-number {
+                min-width: 30px;
+                height: 30px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .left-navbar {
+                width: 50px;
+            }
+
+            .sidebar-logo img {
+                width: 28px;
+                height: 28px;
+            }
+
+            .main-content {
+                margin-left: 50px;
+                width: calc(100% - 50px);
+            }
+
+            .top-navbar {
+                padding: 10px 15px;
+            }
+
+            .logo-img {
+                height: 55px;
+                width: 55px;
+            }
+
+            .logo-sub {
+                font-size: 13px;
+            }
+
+            .slider-section {
+                padding: 15px 10px;
+            }
+
+            .slide img {
+                height: 180px;
+            }
+
+            .slide-overlay h2 {
+                font-size: 17px;
+            }
+
+            .slide-overlay p {
+                font-size: 12px;
+            }
+
+            .slider-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+                padding: 6px 8px;
+            }
+
+            .footer {
+                padding: 30px 15px 15px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .footer-column h3 {
+                font-size: 16px;
+            }
+
+            .footer-quick-links {
+                gap: 8px 12px;
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                font-size: 12px;
+            }
+
+            .page-content {
+                padding: 20px 10px;
+            }
+
+            .page-content h1 {
+                font-size: 20px;
+            }
+
+            .accordion-header {
+                font-size: 15px;
+                padding: 12px 15px;
+                gap: 10px;
+            }
+
+            .accordion-header i {
+                font-size: 18px;
+            }
+
+            .accordion-content-inner {
+                padding: 10px 12px 20px;
+            }
+
+            .manifesto-point {
+                padding: 8px 10px;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .manifesto-point .point-number {
+                min-width: 26px;
+                height: 26px;
+                font-size: 11px;
+            }
+
+            .manifesto-point .point-text {
+                font-size: 13px;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== LEFT VERTICAL NAVBAR ===== -->
+    <nav class="left-navbar">
+        
+        <div class="sidebar-logo">
+            <img src="IMG-20260710-WA0166.jpg" alt="AamadmiPakistan Logo">
+            <div class="logo-text">Aamadmi<span>Pakistan</span></div>
+            <div class="logo-sub-text">عوام کی طاقت، عوام کا اختیار</div>
+        </div>
+
+        <div class="nav-links">
+            <div class="nav-section-label">━━ Main</div>
+            <a href="index.html"><span class="link-text">Home</span></a>
+            <a href="#"><span class="link-text">About</span></a>
+            <a href="manifesto.html" class="active"><span class="link-text">Manifesto</span></a>
+
+            <div class="nav-section-label">━━ Party</div>
+            <a href="#"><span class="link-text">Leadership</span></a>
+            <a href="#"><span class="link-text">Elections</span></a>
+            <a href="#"><span class="link-text">News</span></a>
+
+            <div class="nav-section-label">━━ Media</div>
+            <a href="#"><span class="link-text">Gallery</span></a>
+            <a href="#"><span class="link-text">Videos</span></a>
+            <a href="#"><span class="link-text">Portfolio</span></a>
+
+            <div class="nav-section-label">━━ Connect</div>
+            <a href="#"><span class="link-text">Contact</span></a>
+            <a href="#"><span class="link-text">Email</span></a>
+            <a href="#"><span class="link-text">Office</span></a>
+
+            <div class="nav-bottom">
+                <a href="#"><span class="link-text">Settings</span></a>
+                <a href="#"><span class="link-text">Support</span></a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content">
+
+        <!-- TOP NAVBAR -->
+        <nav class="top-navbar">
+            <a href="#" class="center-logo">
+                <img src="IMG-20260710-WA0166.jpg" alt="AamadmiPakistan Logo" class="logo-img">
+                <span class="logo-sub">عوام کی طاقت، عوام کا اختیار</span>
+            </a>
+        </nav>
+
+        <!-- SLIDER SECTION -->
+        <section class="slider-section">
+            <div class="slider-container">
+                
+                <div class="slider-wrapper" id="sliderWrapper">
+                    
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1200" alt="Poor Person">
+                        <div class="slide-overlay">
+                            <h2>🇵🇰 غربت کا خاتمہ</h2>
+                            <p>ہر پاکستانی کو بنیادی حقوق فراہم کریں</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1200" alt="Development">
+                        <div class="slide-overlay">
+                            <h2>🏗️ پاکستان کی ترقی</h2>
+                            <p>جدید انفراسٹرکچر اور معاشی خوشحالی</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200" alt="Education">
+                        <div class="slide-overlay">
+                            <h2>📚 تعلیم سب کے لیے</h2>
+                            <p>معیاری تعلیم ہر بچے کا حق</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200" alt="Unity">
+                        <div class="slide-overlay">
+                            <h2>🤝 اتحاد اور یکجہتی</h2>
+                            <p>مل جل کر پاکستان کو ترقی دیں</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="slider-btn prev" id="prevBtn">❮</button>
+                <button class="slider-btn next" id="nextBtn">❯</button>
+
+            </div>
+
+            <div class="slider-dots" id="dotsContainer">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+        </section>
+
+        <!-- ===== MANIFESTO CONTENT ===== -->
+        <section class="page-content">
+            <div class="content-box">
+                <h1>📜 ہمارا منشور</h1>
+                
+                <div class="main-accordion">
+                    <!-- Heading - Click to Expand/Collapse -->
+                    <button class="accordion-header active" onclick="toggleManifesto()">
+                        <i class="fas fa-file-alt"></i>
+                        <span>مکمل منشور پڑھیں</span>
+                        <i class="fas fa-chevron-down arrow-icon"></i>
+                    </button>
+
+                    <!-- Content -->
+                    <div class="accordion-content open" id="manifestoContent">
+                        <div class="accordion-content-inner">
+
+                            <!-- Point 1 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">حکومتی ایوانوں میں مکمل سادگی اختیار کی جائے گی۔</span>
+                                <span class="point-number">1</span>
+                            </div>
+
+                            <!-- Point 2 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">حکومتی عہدیداروں کیلئے ٹریفک کنٹرول پر مکمل لازم ہوگا۔ چاہے وہ وزیر اعظم یا صدر ہی کیوں نہ ہوں۔</span>
+                                <span class="point-number">2</span>
+                            </div>
+
+                            <!-- Point 3 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">بیرون ملک سے آئے ہوئے حکومتی عہدیدار یا دورے سے مہمان جن کی سیکیورٹی ضروری ہوگی، ان کیلئے ٹریفک کنٹرول کرنا لازم نہیں ہوگا۔ یہ فیصلہ ریاست کے سیکورٹی ادارے کریں گے۔</span>
+                                <span class="point-number">3</span>
+                            </div>
+
+                            <!-- Point 4 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">بیرون ملک سے لائے والے تمام تحفے کوئی بھی حکمران یا حکومتی ایوان کا کوئی بھی عہدیدار پوری یا آدھی قیمت پر بھی نہیں خرید سکے گا۔ ان کی نیلامی ہوگی اور نیلامی کی رقم قومی میڈیا پر عوام کو دکھائی جائے گی۔</span>
+                                <span class="point-number">4</span>
+                            </div>
+
+                            <!-- Point 5 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">حکومتی عہدیداروں کی سیکیورٹی پر کم از کم خرچ کیا جائے گا۔ اس سلسلے میں سیکورٹی اداروں کی رہنمائی پر عمل کیا جائے گا۔</span>
+                                <span class="point-number">5</span>
+                            </div>
+
+                            <!-- Point 6 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">سابقہ وزیراعظم، صدر، گورنر، وزراء اعلیٰ کی کوئی بھی ذاتی قسم کی مراعات، سیکورٹی، میڈیکل یا کوئی سفری اخراجات نہیں ملیں گے۔</span>
+                                <span class="point-number">6</span>
+                            </div>
+
+                            <!-- Point 7 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">صوبائی اور وفاقی اسمبلی کے اجلاسوں کیلئے کوئی TA/DA نہیں ہوگا، صرف رہائش کی سہولت ریاست کی طرف سے دی جائے گی۔</span>
+                                <span class="point-number">7</span>
+                            </div>
+
+                            <!-- Point 8 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">تمام صوبائی اور وفاقی وزراء کیلئے 10 مرلے سے زیادہ رہائش گاہ نہیں ہوگی۔ بجلی اور گیس کی حد مقرر کر دی جائے گی۔</span>
+                                <span class="point-number">8</span>
+                            </div>
+
+                            <!-- Point 9 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">تمام حکومتی عہدیداران بشمول منسٹرز کو اکانومی کلاس میں سفر کریں گے۔</span>
+                                <span class="point-number">9</span>
+                            </div>
+
+                            <!-- Point 10 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">کوئی بھی وفاقی یا صوبائی وزیر، منسٹر، مشیر، گورنر شاہانہ انداز استعمال نہیں کریں گے۔ وزیراعظم، صدر اور سیکورٹی اداروں کے سربراہان بلٹ پروف گاڑی استعمال کریں گے۔</span>
+                                <span class="point-number">10</span>
+                            </div>
+
+                            <!-- Point 11 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">کسی بھی سرکاری افسر کی رہائش گاہ ایک کنال سے زیادہ نہیں ہوگی، بشمول چیف سیکریٹری، آئی جی پولیس۔</span>
+                                <span class="point-number">11</span>
+                            </div>
+
+                            <!-- Point 12 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">کوئی بھی سرکاری ملازم دو عہدوں سے پنشن نہیں لے سکے گا۔</span>
+                                <span class="point-number">12</span>
+                            </div>
+
+                            <!-- Point 13 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">کسی بھی سرکاری افسر کو سرکاری یا ذاتی استعمال کیلئے سیکورٹی کے علاوہ کوئی اضافی گاڑی نہیں دی جائے گی۔</span>
+                                <span class="point-number">13</span>
+                            </div>
+
+                            <!-- Point 14 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">کوئی بھی حکومتی یا سرکاری عہدیدار اپنی فیملی یا بچوں کیلئے سرکاری گاڑی استعمال نہیں کریں گے۔</span>
+                                <span class="point-number">14</span>
+                            </div>
+
+                            <!-- Point 15 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">بیوروکریسی پر خرچے سے عوام کو آگاہ کیا جائے گا۔</span>
+                                <span class="point-number">15</span>
+                            </div>
+
+                            <!-- Point 16 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">تمام سرکاری افسران روزانہ تین گھنٹے عوام کے مسائل سننے کیلئے اپنے دفاتر کے دروازے کھلے رکھیں گے۔</span>
+                                <span class="point-number">16</span>
+                            </div>
+
+                            <!-- Point 17 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">دفاتر کے اوقات کے بعد کوئی ذاتی مہمان نہیں ہوگا۔</span>
+                                <span class="point-number">17</span>
+                            </div>
+
+                            <!-- Point 18 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ٹیکس وصول کرنے والے سرکاری ملازمین کو مناسب انسینٹو دیا جائے گا۔</span>
+                                <span class="point-number">18</span>
+                            </div>
+
+                            <!-- Point 19 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">پاکستان کے ہر گاؤں میں کم از کم ایک پارک ضرور بنایا جائے گا۔</span>
+                                <span class="point-number">19</span>
+                            </div>
+
+                            <!-- Point 20 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ملک میں بلدیاتی نظام کو مضبوط سے مضبوط بنایا جائے گا۔</span>
+                                <span class="point-number">20</span>
+                            </div>
+
+                            <!-- Point 21 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">کسی بھی سرکاری ملازم کو اس کی مرضی کے بغیر نوکری سے نہیں نکالا جائے گا۔</span>
+                                <span class="point-number">21</span>
+                            </div>
+
+                            <!-- Point 22 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">عدلیہ میں ہائی کورٹ اور سپریم کورٹ سے آگے ادارے نہیں بنائے جائیں گے۔</span>
+                                <span class="point-number">22</span>
+                            </div>
+
+                            <!-- Point 23 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">وفاقی آئینی عدالت، ٹریبونلز کو ختم کیا جائے گا۔</span>
+                                <span class="point-number">23</span>
+                            </div>
+
+                            <!-- Point 24 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">چیف جسٹس آف پاکستان مکمل طور پر آزاد ہوگا۔</span>
+                                <span class="point-number">24</span>
+                            </div>
+
+                            <!-- Point 25 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">سپریم کورٹ اور ہائی کورٹ کے سینئر موسٹ جج کو چیف جسٹس بنایا جائے گا۔</span>
+                                <span class="point-number">25</span>
+                            </div>
+
+                            <!-- Point 26 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">الیکشن لڑنا آسان ہوگا، پیسے کا عمل دخل مکمل طور پر ختم کیا جائے گا۔</span>
+                                <span class="point-number">26</span>
+                            </div>
+
+                            <!-- Point 27 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">تمام اداروں کے سربراہوں کی تعیناتی میرٹ کی بنیاد پر ہوگی۔</span>
+                                <span class="point-number">27</span>
+                            </div>
+
+                            <!-- Point 28 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">سرکاری اداروں میں عوام کے گلے شیشے کے پیچھے سے کھانے پینے پر مکمل پابندی ہوگی۔</span>
+                                <span class="point-number">28</span>
+                            </div>
+
+                            <!-- Point 29 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">عوام کے گلے شیشے کے پیچھے سے دفاتر میں چائے بھی نہیں پلائی جائے گی۔</span>
+                                <span class="point-number">29</span>
+                            </div>
+
+                            <!-- Point 30 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ہر پرائیویٹ سکول، کالج اور یونیورسٹیوں میں عام عوام کے بچوں کیلئے مخصوص کوٹہ ہوگا۔</span>
+                                <span class="point-number">30</span>
+                            </div>
+
+                            <!-- Point 31 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">انفرادی جائے گی اور ان کی بھی ضبطی کی جائے گی۔</span>
+                                <span class="point-number">31</span>
+                            </div>
+
+                            <!-- Point 32 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ہر اسٹیشن میں سرکاری ملازمین کیلئے سرکاری رہائش میں شاہانہ مزہ نہیں دیا جائے گا۔</span>
+                                <span class="point-number">32</span>
+                            </div>
+
+                            <!-- Point 33 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">عوام کو تمام پوش علاقوں اور سرکاری سوسائٹیز میں رسائی فراہم کی جائے گی۔</span>
+                                <span class="point-number">33</span>
+                            </div>
+
+                            <!-- Point 34 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">پولیس اور دیگر متعلقہ اہلکاروں کو بہتر یونیفارم فراہم کی جائیں گی۔</span>
+                                <span class="point-number">34</span>
+                            </div>
+
+                            <!-- Point 35 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">تمام سرکاری اداروں کے ملازمین عوام کو جناب یا سر کہہ کر مخاطب کریں گے۔</span>
+                                <span class="point-number">35</span>
+                            </div>
+
+                            <!-- Point 36 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">اساتذہ کی گاڑیوں پر سرکاری نمبر پلیٹ ہوگی۔</span>
+                                <span class="point-number">36</span>
+                            </div>
+
+                            <!-- Point 37 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">اساتذہ کو لیپ ٹاپ فراہم کرنا لازم ہوگا۔</span>
+                                <span class="point-number">37</span>
+                            </div>
+
+                            <!-- Point 38 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ضلع کی حیثیت ختم کی جائے گی۔</span>
+                                <span class="point-number">38</span>
+                            </div>
+
+                            <!-- Point 39 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">زرعی رقبے کو کمرشل تعمیرات کی اجازت نہیں ہوگی۔</span>
+                                <span class="point-number">39</span>
+                            </div>
+
+                            <!-- Point 40 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">تمام شہرِ پاکستان میں ایک خاص حد تک اونچے گھر بنائے جائیں گے۔</span>
+                                <span class="point-number">40</span>
+                            </div>
+
+                            <!-- Point 41 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">الیکشن میں ہر قسم کی اشتہاری مہم پر پابندی ہوگی۔</span>
+                                <span class="point-number">41</span>
+                            </div>
+
+                            <!-- Point 42 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ہر قسم کے جلسے اور ان کی کارروائی میڈیا پر براہِ راست دکھائی جائے گی۔</span>
+                                <span class="point-number">42</span>
+                            </div>
+
+                            <!-- Point 43 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">نئی نسل کو آگے بڑھانے کیلئے ضلعی سطح پر علماء کی کمیٹی بنائی جائے گی۔</span>
+                                <span class="point-number">43</span>
+                            </div>
+
+                            <!-- Point 44 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">قرض اور معیشت کو مکمل ختم کرنے کی کوشش کی جائے گی۔</span>
+                                <span class="point-number">44</span>
+                            </div>
+
+                            <!-- Point 45 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">پورے ملک میں انٹی کرپشن کو ختم کرنے کی کوشش کی جائے گی۔</span>
+                                <span class="point-number">45</span>
+                            </div>
+
+                            <!-- Point 46 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">عام آدمی کے منشور پر عمل نہ ہونے کی صورت میں حکومت سے بھیکڑی اختیار کر لی جائے گی۔</span>
+                                <span class="point-number">46</span>
+                            </div>
+
+                            <!-- Point 47 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ہر طرح کا الیکشن بروقت کروایا جائے گا۔</span>
+                                <span class="point-number">47</span>
+                            </div>
+
+                            <!-- Point 48 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ہر ضلع کی سطح پر جدید سہولیات اور فرانزک لیبز فراہم کی جائیں گی۔</span>
+                                <span class="point-number">48</span>
+                            </div>
+
+                            <!-- Point 49 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">پولیس ملازمین کے لیے ضلعی سطح پر ہسپتال تعمیر کیے جائیں گے۔</span>
+                                <span class="point-number">49</span>
+                            </div>
+
+                            <!-- Point 50 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">پولیس ملازمین کے بچوں کی تعلیم اور ٹرانسپورٹ مفت دی جائے گی۔</span>
+                                <span class="point-number">50</span>
+                            </div>
+
+                            <!-- Point 51 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">پولیس ملازمین کے لیے رہائشی کالونیز بنائی جائیں گی۔</span>
+                                <span class="point-number">51</span>
+                            </div>
+
+                            <!-- Point 52 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ہر پولیس اسٹیشن میں بارہ ڈیوٹی سینٹری ورکر اور دو سپاہی تعینات ہوں گے۔</span>
+                                <span class="point-number">52</span>
+                            </div>
+
+                            <!-- Point 53 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ایک حوالات میں پانچ سے زیادہ لوگ نہیں رکھے جائیں گے۔</span>
+                                <span class="point-number">53</span>
+                            </div>
+
+                            <!-- Point 54 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ہر پولیس اسٹیشن میں ایک ہی انٹری ہوگی۔</span>
+                                <span class="point-number">54</span>
+                            </div>
+
+                            <!-- Point 55 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ہر پولیس اہلکار گھر کے اندر داخل نہیں ہوگا، سوائے انتہائی دہشت گردی کے۔</span>
+                                <span class="point-number">55</span>
+                            </div>
+
+                            <!-- Point 56 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">سرکاری عمارتوں کا افتتاح کام شروع کرنے ہی کیا جائے گا۔</span>
+                                <span class="point-number">56</span>
+                            </div>
+
+                            <!-- Point 57 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">کسی بھی حکمران کی تصویر عوام کے پیسے سے نہیں لگائی جائے گی۔</span>
+                                <span class="point-number">57</span>
+                            </div>
+
+                            <!-- Point 58 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">کسی عمارت کا نام کسی عوامی نمائندے کے نام پر نہیں رکھا جائے گا۔</span>
+                                <span class="point-number">58</span>
+                            </div>
+
+                            <!-- Point 59 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">تمام عمارتوں کے نام تبدیل کیے جائیں گے اور عوام کی رضامندی سے تبدیلی لائی جائے گی۔</span>
+                                <span class="point-number">59</span>
+                            </div>
+
+                            <!-- Point 60 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ڈریپ یا ڈرائی پورٹ کے قوانین طاقتور افراد استعمال نہیں کر سکیں گے۔</span>
+                                <span class="point-number">60</span>
+                            </div>
+
+                            <!-- Point 61 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">جنگلات اور باغات کی سطح پر غریب لوگوں کو ڈیوٹی آفر کی جائے گی۔</span>
+                                <span class="point-number">61</span>
+                            </div>
+
+                            <!-- Point 62 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">تعلیم ریاست کی طرف سے دی جائے گی، میٹرک تک تعلیم لازمی ہوگی۔</span>
+                                <span class="point-number">62</span>
+                            </div>
+
+                            <!-- Point 63 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ریاست کی پالیسی سیکورٹی اداروں کی مشاورت سے ترتیب دی جائے گی۔</span>
+                                <span class="point-number">63</span>
+                            </div>
+
+                            <!-- Point 64 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">پولیس کو سیاست سے مکمل آزاد کیا جائے گا۔</span>
+                                <span class="point-number">64</span>
+                            </div>
+
+                            <!-- Point 65 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">عوام کا پیسہ کھانے پر سزاۓ موت یا عمر قید کا قانون بنایا جائے گا۔</span>
+                                <span class="point-number">65</span>
+                            </div>
+
+                            <!-- Point 66 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">حکومت اور ریاستی اداروں کا رویہ عوام کے ساتھ اچھا ہونا چاہیے۔</span>
+                                <span class="point-number">66</span>
+                            </div>
+
+                            <!-- Point 67 -->
+                            <div class="manifesto-point">
+                                <span class="point-text">ہر عوامی نمائندے کے پاس اپنے علاقے کے تمام میئرز کا ریکارڈ موجود ہوگا۔</span>
+                                <span class="point-number">67</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="footer-container">
+                
+                <div class="footer-column">
+                    <h3><i class="fas fa-flag"></i> AamadmiPakistan</h3>
+                    <p>عوام کی طاقت، عوام کا اختیار</p>
+                    <p style="margin-top: 8px; font-size: 13px; color: #a8d5b8;">
+                        پاکستان کی ترقی اور عوام کی فلاح کے لیے ہماری کوششیں جاری ہیں۔
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3><i class="fas fa-link"></i> Quick Links</h3>
+                    <div class="footer-quick-links">
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="#"><i class="fas fa-info-circle"></i> About</a>
+                        <a href="manifesto.html"><i class="fas fa-file-alt"></i> Manifesto</a>
+                        <a href="#"><i class="fas fa-users"></i> Leadership</a>
+                        <a href="#"><i class="fas fa-newspaper"></i> News</a>
+                        <a href="#"><i class="fas fa-phone"></i> Contact</a>
+                        <a href="#"><i class="fas fa-images"></i> Gallery</a>
+                        <a href="#"><i class="fas fa-video"></i> Videos</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3><i class="fas fa-address-book"></i> Contact</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-phone"></i> +92 300 1234567</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> info@aamadmipakistan.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3><i class="fas fa-share-alt"></i> Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #a8d5b8;">
+                        سوشل میڈیا پر ہم سے جڑیں اور تازہ ترین خبریں حاصل کریں۔
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 <span>AamadmiPakistan</span> - All Rights Reserved. <br>
+                عوام کی طاقت، عوام کا اختیار
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ===== SLIDER JAVASCRIPT ===== -->
+    <script>
+        const sliderWrapper = document.getElementById('sliderWrapper');
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+            sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        dots.forEach((dot) => {
+            dot.addEventListener('click', function() {
+                currentIndex = parseInt(this.dataset.index);
+                updateSlider();
+            });
+        });
+
+        let autoSlide = setInterval(nextSlide, 4000);
+
+        const sliderContainer = document.querySelector('.slider-container');
+        sliderContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoSlide);
+        });
+
+        sliderContainer.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(nextSlide, 4000);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // ===== SINGLE ACCORDION FUNCTION =====
+        function toggleManifesto() {
+            const header = document.querySelector('.accordion-header');
+            const content = document.getElementById('manifestoContent');
+            
+            header.classList.toggle('active');
+            content.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
