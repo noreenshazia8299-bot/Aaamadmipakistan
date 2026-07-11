@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AamadmiPakistan</title>
+    <title>AamadmiPakistan - Home</title>
     
     <!-- Google Fonts for Urdu -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700;900&display=swap" rel="stylesheet">
@@ -42,7 +42,6 @@
             z-index: 999;
         }
 
-        /* Sidebar Logo */
         .sidebar-logo {
             display: flex;
             flex-direction: column;
@@ -78,7 +77,6 @@
             text-align: center;
         }
 
-        /* Navbar Links */
         .nav-links {
             display: flex;
             flex-direction: column;
@@ -144,7 +142,7 @@
             flex-direction: column;
         }
 
-        /* ===== TOP NAVBAR - CENTER LOGO ===== */
+        /* ===== TOP NAVBAR ===== */
         .top-navbar {
             background: #ffffff;
             padding: 15px 30px;
@@ -318,6 +316,171 @@
             background: #1a5c3a;
         }
 
+        /* ===== CHAIRMAN SECTION - ENHANCED DESIGN ===== */
+        .chairman-section {
+            padding: 50px 30px;
+            background: #ffffff;
+            margin: 0;
+        }
+
+        .chairman-section .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .chairman-section .section-title {
+            font-size: 32px;
+            color: #1a5c3a;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .chairman-section .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #f4a51c;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .chairman-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: linear-gradient(145deg, #ffffff, #f8faf8);
+            border-radius: 20px;
+            padding: 35px 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08), 0 5px 15px rgba(0,0,0,0.05);
+            border-right: 6px solid #f4a51c;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .chairman-content:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+        }
+
+        /* Image Wrapper */
+        .chairman-image-wrapper {
+            flex: 0 0 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin-top: -20px;
+        }
+
+        .chairman-image {
+            width: 260px;
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 5px solid #1a5c3a;
+            background: #e8f0ec;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .chairman-image:hover {
+            transform: scale(1.02);
+            border-color: #f4a51c;
+        }
+
+        .chairman-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .chairman-image .placeholder-img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: #1a5c3a;
+            opacity: 0.4;
+            background: #e8f0ec;
+        }
+
+        /* Award Badge */
+        .award-badge {
+            background: linear-gradient(135deg, #1a5c3a, #2a7a4a);
+            color: #ffffff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-align: center;
+            margin-top: -12px;
+            box-shadow: 0 4px 15px rgba(26, 92, 58, 0.4);
+            border: 2px solid #f4a51c;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .award-badge i {
+            margin-left: 8px;
+            color: #f4a51c;
+        }
+
+        /* Text side */
+        .chairman-text {
+            flex: 1;
+        }
+
+        .chairman-text .name {
+            font-size: 30px;
+            font-weight: 900;
+            color: #1a5c3a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 2px;
+            letter-spacing: 1px;
+        }
+
+        /* SAME FONT FOR DESIGNATION - Same as Name */
+        .chairman-text .designation {
+            font-size: 18px;
+            font-weight: 700;
+            color: #f4a51c;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Same font as name */
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .chairman-text .designation::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: #f4a51c;
+            margin-top: 8px;
+        }
+
+        .chairman-text .bio {
+            font-size: 16px;
+            line-height: 2;
+            color: #444;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-align: justify;
+        }
+
+        .chairman-text .bio strong {
+            color: #1a5c3a;
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background: #1a5c3a;
@@ -390,7 +553,6 @@
             padding-right: 5px;
         }
 
-        /* ===== QUICK LINKS - IN ROW WITH ICONS ===== */
         .footer-quick-links {
             display: flex;
             flex-wrap: wrap;
@@ -520,13 +682,59 @@
                 padding: 8px 12px;
             }
 
+            .chairman-section {
+                padding: 30px 15px;
+            }
+
+            .chairman-content {
+                flex-direction: column;
+                padding: 25px 20px;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .chairman-image-wrapper {
+                flex: 0 0 auto;
+                margin-top: 0;
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .chairman-image {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1/1.2;
+            }
+
+            .chairman-text .name {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .chairman-text .designation {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .chairman-text .designation::after {
+                margin: 8px auto 0;
+            }
+
+            .chairman-text .bio {
+                font-size: 15px;
+                text-align: justify;
+            }
+
+            .award-badge {
+                font-size: 12px;
+                padding: 6px 15px;
+                white-space: normal;
+                margin-top: -8px;
+            }
+
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
-            }
-
-            .footer-quick-links {
-                gap: 10px 15px;
             }
         }
 
@@ -599,6 +807,45 @@
                 gap: 6px;
             }
 
+            .chairman-section {
+                padding: 20px 10px;
+            }
+
+            .chairman-section .section-title {
+                font-size: 24px;
+            }
+
+            .chairman-content {
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .chairman-image-wrapper {
+                max-width: 220px;
+            }
+
+            .chairman-image {
+                border-width: 3px;
+            }
+
+            .chairman-text .name {
+                font-size: 20px;
+            }
+
+            .chairman-text .designation {
+                font-size: 14px;
+            }
+
+            .chairman-text .bio {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .award-badge {
+                font-size: 11px;
+                padding: 4px 12px;
+            }
+
             .footer {
                 padding: 30px 15px 15px;
             }
@@ -610,16 +857,6 @@
 
             .footer-column h3 {
                 font-size: 16px;
-            }
-
-            .footer-column p,
-            .footer-column ul li a,
-            .footer-quick-links a {
-                font-size: 13px;
-            }
-
-            .footer-social {
-                justify-content: center;
             }
 
             .footer-quick-links {
@@ -646,9 +883,9 @@
 
         <div class="nav-links">
             <div class="nav-section-label">━━ Main</div>
-            <a href="#" class="active"><span class="link-text">Home</span></a>
+            <a href="index.html" class="active"><span class="link-text">Home</span></a>
             <a href="#"><span class="link-text">About</span></a>
-            <a href="manifsto.html"><span class="link-text">Manifesto</span></a>
+            <a href="manifesto.html"><span class="link-text">Manifesto</span></a>
 
             <div class="nav-section-label">━━ Party</div>
             <a href="#"><span class="link-text">Leadership</span></a>
@@ -737,26 +974,59 @@
             </div>
         </section>
 
+        <!-- ===== CHAIRMAN SECTION ===== -->
+        <section class="chairman-section">
+            <div class="container">
+                <h2 class="section-title">📌 چیئرمین پارٹی</h2>
+                
+                <div class="chairman-content">
+                    <!-- Left Side: Image with Award Badge -->
+                    <div class="chairman-image-wrapper">
+                        <div class="chairman-image">
+                            <!-- Yahan apni image lagaen (chairman.jpg) -->
+                            <img src="chairman.jpg" alt="Chairman - LT COL AKBAR BUTT" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-img\'><i class=\'fas fa-user-tie\'></i></div>'">
+                        </div>
+                        <!-- Award Badge at Bottom -->
+                        <div class="award-badge">
+                            <i class="fas fa-star"></i> تمغہ امتیاز (ملٹری)
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Text -->
+                    <div class="chairman-text">
+                        <h3 class="name">LT COL AKBAR BUTT</h3>
+                        <p class="designation">بانی اور چیئرمین - AamadmiPakistan</p>
+                        <p class="bio">
+                            <strong>لیفٹیننٹ کرنل اکبر بٹ</strong> (ریٹائرڈ) ایک باہمت اور عوامی رہنما ہیں جنہوں نے اپنی زندگی عوام کی خدمت کے لیے وقف کر دی ہے۔ 
+                            ان کا ماننا ہے کہ پاکستان کی ترقی کا راز عوام کی فلاح اور ان کے بنیادی حقوق کی فراہمی میں ہے۔ 
+                            ان کی قیادت میں <strong>AamadmiPakistan</strong> ایک ایسا پلیٹ فارم بن کر ابھرا ہے جو ہر طبقے کو ساتھ لے کر چلنے کا عزم رکھتا ہے۔
+                            <br><br>
+                            ان کا مشن ایک ایسا پاکستان ہے جہاں تعلیم، صحت، انصاف اور روزگار ہر پاکستانی کا حق ہو۔ 
+                            وہ عوام کی آواز کو مضبوط کرنے اور انہیں بااختیار بنانے کے لیے پرعزم ہیں۔
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ===== FOOTER ===== -->
         <footer class="footer">
             <div class="footer-container">
                 
-                <!-- Column 1: About -->
                 <div class="footer-column">
                     <h3><i class="fas fa-flag"></i> AamadmiPakistan</h3>
                     <p>عوام کی طاقت، عوام کا اختیار</p>
                     <p style="margin-top: 8px; font-size: 13px; color: #a8d5b8;">
-                        پاکستان کی ترقی اور عوام کی فلاح کے لیے ہماری کوششیں جاری ہیں۔ ہر طبقے کو ساتھ لے کر چلنے والی پارٹی۔
+                        پاکستان کی ترقی اور عوام کی فلاح کے لیے ہماری کوششیں جاری ہیں۔
                     </p>
                 </div>
 
-                <!-- Column 2: Quick Links - IN ROW WITH ICONS -->
                 <div class="footer-column">
                     <h3><i class="fas fa-link"></i> Quick Links</h3>
                     <div class="footer-quick-links">
-                        <a href="#"><i class="fas fa-home"></i> Home</a>
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
                         <a href="#"><i class="fas fa-info-circle"></i> About</a>
-                        <a href="#"><i class="fas fa-file-alt"></i> Manifesto</a>
+                        <a href="manifesto.html"><i class="fas fa-file-alt"></i> Manifesto</a>
                         <a href="#"><i class="fas fa-users"></i> Leadership</a>
                         <a href="#"><i class="fas fa-newspaper"></i> News</a>
                         <a href="#"><i class="fas fa-phone"></i> Contact</a>
@@ -765,7 +1035,6 @@
                     </div>
                 </div>
 
-                <!-- Column 3: Contact -->
                 <div class="footer-column">
                     <h3><i class="fas fa-address-book"></i> Contact</h3>
                     <ul>
@@ -775,7 +1044,6 @@
                     </ul>
                 </div>
 
-                <!-- Column 4: Social -->
                 <div class="footer-column">
                     <h3><i class="fas fa-share-alt"></i> Follow Us</h3>
                     <div class="footer-social">
