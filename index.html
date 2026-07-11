@@ -8,9 +8,6 @@
     <!-- Google Fonts for Urdu -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700;900&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
     <style>
         /* ===== RESET ===== */
         * {
@@ -380,6 +377,27 @@
             padding-right: 5px;
         }
 
+        /* ===== QUICK LINKS - IN ROW ===== */
+        .footer-quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+            margin-top: 5px;
+        }
+
+        .footer-quick-links a {
+            color: #c8e6d0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-quick-links a:hover {
+            color: #f4a51c;
+            transform: translateX(3px);
+        }
+
         .footer-social {
             display: flex;
             gap: 12px;
@@ -397,7 +415,8 @@
             justify-content: center;
             text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 18px;
+            font-size: 14px;
+            font-weight: 700;
         }
 
         .footer-social a:hover {
@@ -487,6 +506,10 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
+
+            .footer-quick-links {
+                gap: 10px 15px;
+            }
         }
 
         @media (max-width: 600px) {
@@ -572,11 +595,17 @@
             }
 
             .footer-column p,
-            .footer-column ul li a {
+            .footer-column ul li a,
+            .footer-quick-links a {
                 font-size: 13px;
             }
 
             .footer-social {
+                justify-content: center;
+            }
+
+            .footer-quick-links {
+                gap: 8px 12px;
                 justify-content: center;
             }
 
@@ -696,45 +725,47 @@
                 
                 <!-- Column 1: About -->
                 <div class="footer-column">
-                    <h3>🇵🇰 AamadmiPakistan</h3>
+                    <h3>AamadmiPakistan</h3>
                     <p>عوام کی طاقت، عوام کا اختیار</p>
                     <p style="margin-top: 8px; font-size: 13px; color: #a8d5b8;">
                         پاکستان کی ترقی اور عوام کی فلاح کے لیے ہماری کوششیں جاری ہیں۔ ہر طبقے کو ساتھ لے کر چلنے والی پارٹی۔
                     </p>
                 </div>
 
-                <!-- Column 2: Quick Links -->
+                <!-- Column 2: Quick Links - IN ROW -->
                 <div class="footer-column">
-                    <h3>📌 Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Manifesto</a></li>
-                        <li><a href="#">Leadership</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                    <h3>Quick Links</h3>
+                    <div class="footer-quick-links">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Manifesto</a>
+                        <a href="#">Leadership</a>
+                        <a href="#">News</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Gallery</a>
+                        <a href="#">Videos</a>
+                    </div>
                 </div>
 
                 <!-- Column 3: Contact -->
                 <div class="footer-column">
-                    <h3>📞 Contact</h3>
+                    <h3>Contact</h3>
                     <ul>
-                        <li><a href="#"><i class="fas fa-phone" style="margin-left: 8px;"></i> +92 300 1234567</a></li>
-                        <li><a href="#"><i class="fas fa-envelope" style="margin-left: 8px;"></i> info@aamadmipakistan.com</a></li>
-                        <li><a href="#"><i class="fas fa-map-marker-alt" style="margin-left: 8px;"></i> Islamabad, Pakistan</a></li>
+                        <li><a href="#">+92 300 1234567</a></li>
+                        <li><a href="#">info@aamadmipakistan.com</a></li>
+                        <li><a href="#">Islamabad, Pakistan</a></li>
                     </ul>
                 </div>
 
                 <!-- Column 4: Social -->
                 <div class="footer-column">
-                    <h3>🌐 Follow Us</h3>
+                    <h3>Follow Us</h3>
                     <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#">FB</a>
+                        <a href="#">TW</a>
+                        <a href="#">YT</a>
+                        <a href="#">IG</a>
+                        <a href="#">WA</a>
                     </div>
                     <p style="margin-top: 15px; font-size: 13px; color: #a8d5b8;">
                         سوشل میڈیا پر ہم سے جڑیں اور تازہ ترین خبریں حاصل کریں۔
