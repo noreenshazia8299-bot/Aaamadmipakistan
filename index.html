@@ -605,6 +605,189 @@
             opacity: 1;
         }
 
+        /* ===== OUR TEAM SECTION ===== */
+        .team-section {
+            padding: 40px 30px 60px;
+            background: #ffffff;
+            margin: 0;
+        }
+
+        .team-section .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .team-section .section-title {
+            font-size: 32px;
+            color: #1a5c3a;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .team-section .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #f4a51c;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .team-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            background: #ffffff;
+            border: 2px solid #e8f0ec;
+            aspect-ratio: 3/4;
+            min-height: 350px;
+            max-height: 420px;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-color: #f4a51c;
+        }
+
+        .team-card .team-image {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #e8f0ec, #d5e0d8);
+            transition: all 0.5s ease;
+        }
+
+        .team-card .team-image i {
+            font-size: 80px;
+            color: #1a5c3a;
+            opacity: 0.3;
+            transition: all 0.5s ease;
+        }
+
+        .team-card:hover .team-image i {
+            transform: scale(1.1);
+            opacity: 0.5;
+        }
+
+        .team-card .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .team-card .team-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(26, 92, 58, 0.92));
+            padding: 30px 25px 25px;
+            transform: translateY(60px);
+            transition: all 0.5s ease;
+            text-align: center;
+        }
+
+        .team-card:hover .team-overlay {
+            transform: translateY(0);
+        }
+
+        .team-card .team-overlay h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 3px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.1s;
+            letter-spacing: 0.5px;
+        }
+
+        .team-card:hover .team-overlay h3 {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .team-card .team-overlay .role {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f4a51c;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            margin-bottom: 8px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.15s;
+        }
+
+        .team-card:hover .team-overlay .role {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .team-card .team-overlay .desc {
+            font-size: 14px;
+            color: #d4e8d0;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            line-height: 1.6;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.2s;
+        }
+
+        .team-card:hover .team-overlay .desc {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .team-card .team-overlay .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 12px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.25s;
+        }
+
+        .team-card:hover .team-overlay .social-icons {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .team-card .team-overlay .social-icons a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .team-card .team-overlay .social-icons a:hover {
+            background: #f4a51c;
+            color: #1a5c3a;
+            transform: translateY(-3px);
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background: #1a5c3a;
@@ -748,6 +931,9 @@
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
@@ -881,6 +1067,37 @@
 
             .gallery-card .overlay i {
                 font-size: 30px;
+            }
+
+            .team-section {
+                padding: 30px 15px 40px;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .team-card {
+                min-height: 280px;
+                max-height: 350px;
+                aspect-ratio: 3/4;
+            }
+
+            .team-card .team-overlay h3 {
+                font-size: 17px;
+            }
+
+            .team-card .team-overlay .role {
+                font-size: 13px;
+            }
+
+            .team-card .team-overlay .desc {
+                font-size: 12px;
+            }
+
+            .team-card .team-image i {
+                font-size: 60px;
             }
 
             .footer-container {
@@ -1021,6 +1238,42 @@
             .gallery-card .overlay i {
                 font-size: 22px;
                 margin-bottom: 4px;
+            }
+
+            .team-section {
+                padding: 20px 10px 30px;
+            }
+
+            .team-section .section-title {
+                font-size: 24px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .team-card {
+                min-height: 300px;
+                max-height: 380px;
+            }
+
+            .team-card .team-overlay h3 {
+                font-size: 18px;
+            }
+
+            .team-card .team-overlay .role {
+                font-size: 14px;
+            }
+
+            .team-card .team-overlay .desc {
+                font-size: 13px;
+            }
+
+            .team-card .team-image i {
+                font-size: 70px;
             }
 
             .footer {
@@ -1297,6 +1550,74 @@
                             <i class="fas fa-star"></i>
                             <h3>خوشحال پاکستان</h3>
                             <p>ترقی یافتہ اور خوشحال پاکستان</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== OUR TEAM SECTION ===== -->
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">👥 ہماری ٹیم</h2>
+                
+                <div class="team-grid">
+                    
+                    <!-- Team Member 1 -->
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-circle"></i>
+                            <!-- Apni image yahan lagaen -->
+                            <!-- <img src="team1.jpg" alt="Team Member 1"> -->
+                        </div>
+                        <div class="team-overlay">
+                            <h3>سردار علی خان</h3>
+                            <p class="role">سیکرٹری جنرل</p>
+                            <p class="desc">پارٹی کے سیکرٹری جنرل اور عوامی مسائل کے حل کے لیے پرعزم</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-circle"></i>
+                            <!-- Apni image yahan lagaen -->
+                            <!-- <img src="team2.jpg" alt="Team Member 2"> -->
+                        </div>
+                        <div class="team-overlay">
+                            <h3>محمد ناصر</h3>
+                            <p class="role">سینئر نائب صدر</p>
+                            <p class="desc">پارٹی کے سینئر نائب صدر اور نوجوانوں کی ترقی کے حامی</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-circle"></i>
+                            <!-- Apni image yahan lagaen -->
+                            <!-- <img src="team3.jpg" alt="Team Member 3"> -->
+                        </div>
+                        <div class="team-overlay">
+                            <h3>ثمینہ بیگم</h3>
+                            <p class="role">خواتین ونگ کی سربراہ</p>
+                            <p class="desc">خواتین کے حقوق اور بااختیار بنانے کے لیے خدمات انجام دے رہی ہیں</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
                     </div>
 
