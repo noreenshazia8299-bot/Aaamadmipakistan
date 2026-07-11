@@ -26,7 +26,7 @@
             overflow-x: hidden;
         }
 
-        /* ===== HAMBURGER BUTTON (Mobile Only) ===== */
+        /* ===== HAMBURGER BUTTON ===== */
         .hamburger-btn {
             display: none;
             position: fixed;
@@ -55,7 +55,6 @@
             pointer-events: none;
         }
 
-        /* ===== OVERLAY (Mobile Only) ===== */
         .sidebar-overlay {
             display: none;
             position: fixed;
@@ -838,29 +837,32 @@
             transform: translateY(-3px);
         }
 
-        /* ===== FOOTER ===== */
+        /* ========================================= */
+        /* ===== RESPONSIVE FOOTER ===== */
+        /* ========================================= */
         .footer {
             background: #1a5c3a;
             color: #ffffff;
-            padding: 40px 30px 20px;
+            padding: 50px 30px 20px;
             margin-top: auto;
             border-top: 4px solid #f4a51c;
         }
 
         .footer-container {
-            max-width: 100%;
+            max-width: 1100px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            gap: 35px;
         }
 
         .footer-column h3 {
             font-size: 18px;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             color: #f4a51c;
             font-family: 'Noto Nastaliq Urdu', serif;
+            position: relative;
         }
 
         .footer-column h3 i {
@@ -871,16 +873,18 @@
             content: "";
             display: block;
             width: 40px;
-            height: 2px;
+            height: 3px;
             background: #f4a51c;
-            margin-top: 5px;
+            margin-top: 8px;
+            border-radius: 2px;
         }
 
         .footer-column p {
             font-size: 14px;
-            line-height: 1.8;
+            line-height: 1.9;
             color: #c8e6d0;
             font-family: 'Noto Nastaliq Urdu', serif;
+            margin-bottom: 5px;
         }
 
         .footer-column ul {
@@ -897,23 +901,25 @@
             font-size: 14px;
             transition: all 0.3s ease;
             font-family: 'Noto Nastaliq Urdu', serif;
+            display: inline-block;
         }
 
         .footer-column ul li a i {
             margin-left: 8px;
             width: 20px;
             color: #f4a51c;
+            font-size: 14px;
         }
 
         .footer-column ul li a:hover {
             color: #f4a51c;
-            padding-right: 5px;
+            transform: translateX(3px);
         }
 
         .footer-quick-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px 20px;
+            gap: 10px 18px;
             margin-top: 5px;
         }
 
@@ -923,6 +929,7 @@
             font-size: 14px;
             transition: all 0.3s ease;
             font-family: 'Noto Nastaliq Urdu', serif;
+            display: inline-block;
         }
 
         .footer-quick-links a i {
@@ -939,13 +946,13 @@
         .footer-social {
             display: flex;
             gap: 12px;
-            margin-top: 10px;
+            margin-top: 8px;
             flex-wrap: wrap;
         }
 
         .footer-social a {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             background: rgba(255,255,255,0.1);
             color: #ffffff;
@@ -955,32 +962,35 @@
             text-decoration: none;
             transition: all 0.3s ease;
             font-size: 18px;
+            border: 2px solid transparent;
         }
 
         .footer-social a:hover {
             background: #f4a51c;
             color: #1a5c3a;
-            transform: translateY(-3px);
+            transform: translateY(-4px);
+            border-color: #ffffff;
         }
 
         .footer-bottom {
             text-align: center;
-            padding-top: 20px;
-            margin-top: 30px;
+            padding-top: 25px;
+            margin-top: 35px;
             border-top: 1px solid rgba(255,255,255,0.1);
             font-size: 14px;
             color: #a8d5b8;
             font-family: 'Noto Nastaliq Urdu', serif;
+            line-height: 1.8;
         }
 
         .footer-bottom span {
             color: #f4a51c;
+            font-weight: 700;
         }
 
         /* ========================================= */
-        /* ===== RESPONSIVE ===== */
+        /* ===== RESPONSIVE - TABLET ===== */
         /* ========================================= */
-
         @media (max-width: 992px) {
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -988,15 +998,24 @@
             .team-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            .footer-column h3::after {
+                margin-top: 6px;
+            }
         }
 
+        /* ========================================= */
+        /* ===== RESPONSIVE - MOBILE ===== */
+        /* ========================================= */
         @media (max-width: 768px) {
-            /* ===== HAMBURGER BUTTON ===== */
+            /* ===== HAMBURGER ===== */
             .hamburger-btn {
                 display: block;
             }
 
-            /* ===== OVERLAY ===== */
             .sidebar-overlay {
                 display: block;
                 pointer-events: none;
@@ -1006,7 +1025,6 @@
                 pointer-events: all;
             }
 
-            /* ===== LEFT NAVBAR - Slide from left ===== */
             .left-navbar {
                 width: 280px;
                 transform: translateX(-100%);
@@ -1022,14 +1040,9 @@
                 height: 60px;
             }
 
-            /* ===== MAIN CONTENT ===== */
             .main-content {
                 margin-left: 0;
                 width: 100%;
-            }
-
-            .main-content.shifted {
-                margin-left: 0;
             }
 
             /* ===== SLIDER ===== */
@@ -1161,18 +1174,25 @@
                 font-size: 60px;
             }
 
-            /* ===== FOOTER ===== */
+            /* ===== FOOTER - TABLET ===== */
             .footer {
-                padding: 30px 20px 15px;
+                padding: 40px 20px 15px;
             }
 
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
+                gap: 30px;
             }
 
             .footer-column h3 {
-                font-size: 16px;
+                font-size: 17px;
+                margin-bottom: 14px;
+            }
+
+            .footer-column h3::after {
+                width: 35px;
+                height: 2px;
+                margin-top: 6px;
             }
 
             .footer-column p,
@@ -1182,12 +1202,31 @@
             }
 
             .footer-social {
-                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            .footer-social a {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+
+            .footer-bottom {
+                font-size: 13px;
+                padding-top: 20px;
+                margin-top: 25px;
+            }
+
+            .footer-quick-links {
+                gap: 8px 14px;
             }
         }
 
+        /* ========================================= */
+        /* ===== RESPONSIVE - MOBILE SMALL ===== */
+        /* ========================================= */
         @media (max-width: 600px) {
-            /* ===== HAMBURGER BUTTON - Smaller ===== */
+            /* ===== HAMBURGER ===== */
             .hamburger-btn {
                 top: 10px;
                 left: 10px;
@@ -1196,7 +1235,6 @@
                 border-radius: 8px;
             }
 
-            /* ===== LEFT NAVBAR ===== */
             .left-navbar {
                 width: 260px;
             }
@@ -1361,46 +1399,71 @@
                 font-size: 70px;
             }
 
-            /* ===== FOOTER ===== */
+            /* ===== FOOTER - MOBILE ===== */
             .footer {
-                padding: 25px 15px 15px;
+                padding: 35px 15px 15px;
             }
 
             .footer-container {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .footer-column h3 {
+                font-size: 18px;
+                margin-bottom: 12px;
                 text-align: center;
             }
 
             .footer-column h3::after {
-                margin: 5px auto 0;
-            }
-
-            .footer-column h3 {
-                text-align: center;
+                margin: 6px auto 0;
+                width: 40px;
             }
 
             .footer-column p {
                 text-align: center;
+                font-size: 14px;
             }
 
             .footer-column ul li {
                 text-align: center;
             }
 
+            .footer-column ul li a {
+                font-size: 14px;
+            }
+
             .footer-quick-links {
                 justify-content: center;
+                gap: 10px 16px;
+            }
+
+            .footer-quick-links a {
+                font-size: 14px;
             }
 
             .footer-social {
                 justify-content: center;
+                gap: 12px;
+            }
+
+            .footer-social a {
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
             }
 
             .footer-bottom {
-                font-size: 12px;
+                font-size: 13px;
+                padding-top: 20px;
+                margin-top: 25px;
             }
         }
 
+        /* ========================================= */
+        /* ===== RESPONSIVE - EXTRA SMALL ===== */
+        /* ========================================= */
         @media (max-width: 400px) {
             .left-navbar {
                 width: 240px;
@@ -1430,17 +1493,45 @@
                 font-size: 18px;
                 margin-bottom: 2px;
             }
+
+            .footer {
+                padding: 25px 12px 12px;
+            }
+
+            .footer-container {
+                gap: 25px;
+            }
+
+            .footer-column h3 {
+                font-size: 16px;
+            }
+
+            .footer-column p,
+            .footer-column ul li a,
+            .footer-quick-links a {
+                font-size: 13px;
+            }
+
+            .footer-social a {
+                width: 38px;
+                height: 38px;
+                font-size: 15px;
+            }
+
+            .footer-bottom {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== HAMBURGER BUTTON (Mobile) ===== -->
+    <!-- ===== HAMBURGER BUTTON ===== -->
     <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Sidebar">
         <i class="fas fa-bars"></i>
     </button>
 
-    <!-- ===== SIDEBAR OVERLAY (Mobile) ===== -->
+    <!-- ===== SIDEBAR OVERLAY ===== -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <!-- ===== LEFT VERTICAL NAVBAR ===== -->
@@ -1548,12 +1639,12 @@
         <!-- ===== CHAIRMAN SECTION ===== -->
         <section class="chairman-section">
             <div class="container">
-                <h2 class="section-title"> چیئرمین -  (عام آدمی پاکستان)</h2>
+                <h2 class="section-title">  (عام آدمی پاکستان) چیئرمین</h2>
                 
                 <div class="chairman-content">
                     <div class="chairman-image-wrapper">
                         <div class="chairman-image">
-                            <img src="chairman.jpg" alt="Chairman - LT COL AKBAR BUTT" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-img\'><i class=\'fas fa-user-tie\'></i></div>'">
+                            <img src="IMG-20260711-WA0064.jpg" alt="Chairman - LT COL AKBAR BUTT" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-img\'><i class=\'fas fa-user-tie\'></i></div>'">
                         </div>
                         <div class="award-badge">
                             <i class="fas fa-star"></i> تمغہ امتیاز (ملٹری)
@@ -1579,7 +1670,7 @@
         <!-- ===== GALLERY SECTION ===== -->
         <section class="gallery-section">
             <div class="container">
-                <h2 class="section-title">  گیلری</h2>
+                <h2 class="section-title"> گیلری</h2>
                 
                 <div class="gallery-grid">
                     
@@ -1757,10 +1848,11 @@
             </div>
         </section>
 
-        <!-- ===== FOOTER ===== -->
+        <!-- ===== FULLY RESPONSIVE FOOTER ===== -->
         <footer class="footer">
             <div class="footer-container">
                 
+                <!-- Column 1: About -->
                 <div class="footer-column">
                     <h3><i class="fas fa-flag"></i> AamadmiPakistan</h3>
                     <p>عوام کی طاقت، عوام کا اختیار</p>
@@ -1769,6 +1861,7 @@
                     </p>
                 </div>
 
+                <!-- Column 2: Quick Links -->
                 <div class="footer-column">
                     <h3><i class="fas fa-link"></i> Quick Links</h3>
                     <div class="footer-quick-links">
@@ -1783,6 +1876,7 @@
                     </div>
                 </div>
 
+                <!-- Column 3: Contact -->
                 <div class="footer-column">
                     <h3><i class="fas fa-address-book"></i> Contact</h3>
                     <ul>
@@ -1792,6 +1886,7 @@
                     </ul>
                 </div>
 
+                <!-- Column 4: Social -->
                 <div class="footer-column">
                     <h3><i class="fas fa-share-alt"></i> Follow Us</h3>
                     <div class="footer-social">
@@ -1801,7 +1896,7 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                    <p style="margin-top: 15px; font-size: 13px; color: #a8d5b8;">
+                    <p style="margin-top: 12px; font-size: 13px; color: #a8d5b8;">
                         سوشل میڈیا پر ہم سے جڑیں اور تازہ ترین خبریں حاصل کریں۔
                     </p>
                 </div>
@@ -1880,7 +1975,6 @@
         function toggleSidebar() {
             leftNavbar.classList.toggle('open');
             sidebarOverlay.classList.toggle('active');
-            // Change icon
             if (leftNavbar.classList.contains('open')) {
                 hamburgerBtn.innerHTML = '<i class="fas fa-times"></i>';
             } else {
@@ -1897,14 +1991,12 @@
         hamburgerBtn.addEventListener('click', toggleSidebar);
         sidebarOverlay.addEventListener('click', closeSidebar);
 
-        // Close sidebar on window resize (if going from mobile to desktop)
         window.addEventListener('resize', function() {
             if (window.innerWidth > 768) {
                 closeSidebar();
             }
         });
 
-        // Close sidebar when clicking a link (mobile)
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function() {
                 if (window.innerWidth <= 768) {
