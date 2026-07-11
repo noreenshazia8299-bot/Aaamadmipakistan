@@ -23,6 +23,54 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f4f4f4;
             display: flex;
+            overflow-x: hidden;
+        }
+
+        /* ===== HAMBURGER BUTTON (Mobile Only) ===== */
+        .hamburger-btn {
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1001;
+            background: #1a5c3a;
+            color: #ffffff;
+            border: none;
+            padding: 12px 14px;
+            border-radius: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 2px solid #f4a51c;
+        }
+
+        .hamburger-btn:hover {
+            background: #f4a51c;
+            color: #1a5c3a;
+            transform: scale(1.05);
+        }
+
+        .hamburger-btn i {
+            pointer-events: none;
+        }
+
+        /* ===== OVERLAY (Mobile Only) ===== */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
         }
 
         /* ===== LEFT VERTICAL NAVBAR ===== */
@@ -39,7 +87,8 @@
             flex-direction: column;
             border-right: 3px solid #f4a51c;
             overflow-y: auto;
-            z-index: 999;
+            z-index: 1000;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .sidebar-logo {
@@ -140,6 +189,7 @@
             background: #ffffff;
             display: flex;
             flex-direction: column;
+            transition: margin-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* ===== TOP NAVBAR ===== */
@@ -890,6 +940,7 @@
             display: flex;
             gap: 12px;
             margin-top: 10px;
+            flex-wrap: wrap;
         }
 
         .footer-social a {
@@ -926,7 +977,10 @@
             color: #f4a51c;
         }
 
+        /* ========================================= */
         /* ===== RESPONSIVE ===== */
+        /* ========================================= */
+
         @media (max-width: 992px) {
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -937,44 +991,48 @@
         }
 
         @media (max-width: 768px) {
+            /* ===== HAMBURGER BUTTON ===== */
+            .hamburger-btn {
+                display: block;
+            }
+
+            /* ===== OVERLAY ===== */
+            .sidebar-overlay {
+                display: block;
+                pointer-events: none;
+            }
+
+            .sidebar-overlay.active {
+                pointer-events: all;
+            }
+
+            /* ===== LEFT NAVBAR - Slide from left ===== */
             .left-navbar {
+                width: 280px;
+                transform: translateX(-100%);
+                box-shadow: 4px 0 30px rgba(0,0,0,0.3);
+            }
+
+            .left-navbar.open {
+                transform: translateX(0);
+            }
+
+            .left-navbar .sidebar-logo img {
                 width: 60px;
-                padding: 10px 0;
+                height: 60px;
             }
 
-            .sidebar-logo {
-                padding: 5px 5px 10px 5px;
-            }
-
-            .sidebar-logo img {
-                width: 35px;
-                height: 35px;
-                border-width: 2px;
-            }
-
-            .sidebar-logo .logo-text,
-            .sidebar-logo .logo-sub-text,
-            .nav-section-label,
-            .nav-links a .link-text {
-                display: none;
-            }
-
-            .nav-links {
-                padding: 5px 5px;
-                gap: 3px;
-            }
-
-            .nav-links a {
-                font-size: 10px;
-                padding: 10px 6px;
-                justify-content: center;
-            }
-
+            /* ===== MAIN CONTENT ===== */
             .main-content {
-                margin-left: 60px;
-                width: calc(100% - 60px);
+                margin-left: 0;
+                width: 100%;
             }
 
+            .main-content.shifted {
+                margin-left: 0;
+            }
+
+            /* ===== SLIDER ===== */
             .slider-section {
                 padding: 20px 15px;
             }
@@ -998,6 +1056,7 @@
                 padding: 8px 12px;
             }
 
+            /* ===== CHAIRMAN ===== */
             .chairman-section {
                 padding: 30px 15px;
             }
@@ -1048,6 +1107,7 @@
                 margin-top: -8px;
             }
 
+            /* ===== GALLERY ===== */
             .gallery-section {
                 padding: 20px 15px 30px;
             }
@@ -1069,6 +1129,7 @@
                 font-size: 30px;
             }
 
+            /* ===== TEAM ===== */
             .team-section {
                 padding: 30px 15px 40px;
             }
@@ -1100,27 +1161,47 @@
                 font-size: 60px;
             }
 
+            /* ===== FOOTER ===== */
+            .footer {
+                padding: 30px 20px 15px;
+            }
+
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+                gap: 25px;
+            }
+
+            .footer-column h3 {
+                font-size: 16px;
+            }
+
+            .footer-column p,
+            .footer-column ul li a,
+            .footer-quick-links a {
+                font-size: 13px;
+            }
+
+            .footer-social {
+                justify-content: flex-start;
             }
         }
 
         @media (max-width: 600px) {
+            /* ===== HAMBURGER BUTTON - Smaller ===== */
+            .hamburger-btn {
+                top: 10px;
+                left: 10px;
+                padding: 10px 12px;
+                font-size: 18px;
+                border-radius: 8px;
+            }
+
+            /* ===== LEFT NAVBAR ===== */
             .left-navbar {
-                width: 50px;
+                width: 260px;
             }
 
-            .sidebar-logo img {
-                width: 28px;
-                height: 28px;
-            }
-
-            .main-content {
-                margin-left: 50px;
-                width: calc(100% - 50px);
-            }
-
+            /* ===== TOP NAVBAR ===== */
             .top-navbar {
                 padding: 10px 15px;
             }
@@ -1134,6 +1215,7 @@
                 font-size: 13px;
             }
 
+            /* ===== SLIDER ===== */
             .slider-section {
                 padding: 15px 10px;
             }
@@ -1175,6 +1257,7 @@
                 gap: 6px;
             }
 
+            /* ===== CHAIRMAN ===== */
             .chairman-section {
                 padding: 20px 10px;
             }
@@ -1214,6 +1297,7 @@
                 padding: 4px 12px;
             }
 
+            /* ===== GALLERY ===== */
             .gallery-section {
                 padding: 15px 10px 20px;
             }
@@ -1240,6 +1324,7 @@
                 margin-bottom: 4px;
             }
 
+            /* ===== TEAM ===== */
             .team-section {
                 padding: 20px 10px 30px;
             }
@@ -1276,21 +1361,38 @@
                 font-size: 70px;
             }
 
+            /* ===== FOOTER ===== */
             .footer {
-                padding: 30px 15px 15px;
+                padding: 25px 15px 15px;
             }
 
             .footer-container {
                 grid-template-columns: 1fr;
-                gap: 25px;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .footer-column h3::after {
+                margin: 5px auto 0;
             }
 
             .footer-column h3 {
-                font-size: 16px;
+                text-align: center;
+            }
+
+            .footer-column p {
+                text-align: center;
+            }
+
+            .footer-column ul li {
+                text-align: center;
             }
 
             .footer-quick-links {
-                gap: 8px 12px;
+                justify-content: center;
+            }
+
+            .footer-social {
                 justify-content: center;
             }
 
@@ -1298,12 +1400,51 @@
                 font-size: 12px;
             }
         }
+
+        @media (max-width: 400px) {
+            .left-navbar {
+                width: 240px;
+            }
+
+            .hamburger-btn {
+                top: 8px;
+                left: 8px;
+                padding: 8px 10px;
+                font-size: 16px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .gallery-card .overlay h3 {
+                font-size: 10px;
+            }
+
+            .gallery-card .overlay p {
+                font-size: 8px;
+            }
+
+            .gallery-card .overlay i {
+                font-size: 18px;
+                margin-bottom: 2px;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- ===== HAMBURGER BUTTON (Mobile) ===== -->
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ===== SIDEBAR OVERLAY (Mobile) ===== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     <!-- ===== LEFT VERTICAL NAVBAR ===== -->
-    <nav class="left-navbar">
+    <nav class="left-navbar" id="leftNavbar">
         
         <div class="sidebar-logo">
             <img src="IMG-20260710-WA0166.jpg" alt="AamadmiPakistan Logo">
@@ -1341,7 +1482,7 @@
     </nav>
 
     <!-- ===== MAIN CONTENT ===== -->
-    <div class="main-content">
+    <div class="main-content" id="mainContent">
 
         <!-- TOP NAVBAR -->
         <nav class="top-navbar">
@@ -1407,7 +1548,7 @@
         <!-- ===== CHAIRMAN SECTION ===== -->
         <section class="chairman-section">
             <div class="container">
-                <h2 class="section-title">- AamadmiPakistan (عام آدمی پاکستان) چیئرمین</h2>
+                <h2 class="section-title"> چیئرمین -  (عام آدمی پاکستان)</h2>
                 
                 <div class="chairman-content">
                     <div class="chairman-image-wrapper">
@@ -1438,11 +1579,10 @@
         <!-- ===== GALLERY SECTION ===== -->
         <section class="gallery-section">
             <div class="container">
-                <h2 class="section-title">🖼️ ہماری گیلری</h2>
+                <h2 class="section-title">  گیلری</h2>
                 
                 <div class="gallery-grid">
                     
-                    <!-- Row 1 -->
                     <div class="gallery-card">
                         <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400" alt="Gallery 1">
                         <div class="overlay">
@@ -1479,7 +1619,6 @@
                         </div>
                     </div>
 
-                    <!-- Row 2 -->
                     <div class="gallery-card">
                         <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=400" alt="Gallery 5">
                         <div class="overlay">
@@ -1516,7 +1655,6 @@
                         </div>
                     </div>
 
-                    <!-- Row 3 -->
                     <div class="gallery-card">
                         <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=400" alt="Gallery 9">
                         <div class="overlay">
@@ -1564,11 +1702,9 @@
                 
                 <div class="team-grid">
                     
-                    <!-- Team Member 1 -->
                     <div class="team-card">
                         <div class="team-image">
                             <i class="fas fa-user-circle"></i>
-                            <!-- Apni image yahan lagaen -->
                             <!-- <img src="team1.jpg" alt="Team Member 1"> -->
                         </div>
                         <div class="team-overlay">
@@ -1583,11 +1719,9 @@
                         </div>
                     </div>
 
-                    <!-- Team Member 2 -->
                     <div class="team-card">
                         <div class="team-image">
                             <i class="fas fa-user-circle"></i>
-                            <!-- Apni image yahan lagaen -->
                             <!-- <img src="team2.jpg" alt="Team Member 2"> -->
                         </div>
                         <div class="team-overlay">
@@ -1602,11 +1736,9 @@
                         </div>
                     </div>
 
-                    <!-- Team Member 3 -->
                     <div class="team-card">
                         <div class="team-image">
                             <i class="fas fa-user-circle"></i>
-                            <!-- Apni image yahan lagaen -->
                             <!-- <img src="team3.jpg" alt="Team Member 3"> -->
                         </div>
                         <div class="team-overlay">
@@ -1686,6 +1818,7 @@
 
     <!-- ===== SLIDER JAVASCRIPT ===== -->
     <script>
+        // ===== SLIDER =====
         const sliderWrapper = document.getElementById('sliderWrapper');
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
@@ -1736,6 +1869,48 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight') nextSlide();
             if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        // ===== HAMBURGER MENU =====
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const leftNavbar = document.getElementById('leftNavbar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const mainContent = document.getElementById('mainContent');
+
+        function toggleSidebar() {
+            leftNavbar.classList.toggle('open');
+            sidebarOverlay.classList.toggle('active');
+            // Change icon
+            if (leftNavbar.classList.contains('open')) {
+                hamburgerBtn.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        }
+
+        function closeSidebar() {
+            leftNavbar.classList.remove('open');
+            sidebarOverlay.classList.remove('active');
+            hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+
+        hamburgerBtn.addEventListener('click', toggleSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
+
+        // Close sidebar on window resize (if going from mobile to desktop)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeSidebar();
+            }
+        });
+
+        // Close sidebar when clicking a link (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    closeSidebar();
+                }
+            });
         });
     </script>
 
