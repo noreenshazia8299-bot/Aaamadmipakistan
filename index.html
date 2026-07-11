@@ -318,7 +318,7 @@
 
         /* ===== CHAIRMAN SECTION ===== */
         .chairman-section {
-            padding: 50px 30px;
+            padding: 50px 30px 30px;
             background: #ffffff;
             margin: 0;
         }
@@ -477,6 +477,134 @@
             color: #1a5c3a;
         }
 
+        /* ===== GALLERY SECTION ===== */
+        .gallery-section {
+            padding: 30px 30px 50px;
+            background: #ffffff;
+            margin: 0;
+        }
+
+        .gallery-section .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .gallery-section .section-title {
+            font-size: 32px;
+            color: #1a5c3a;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .gallery-section .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #f4a51c;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            aspect-ratio: 4/3;
+            background: #f0f3f0;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 92, 58, 0.85), rgba(26, 92, 58, 0.7));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.5s ease;
+            padding: 20px;
+            text-align: center;
+            border: 3px solid transparent;
+        }
+
+        .gallery-card:hover .overlay {
+            opacity: 1;
+            border-color: #f4a51c;
+        }
+
+        .gallery-card .overlay i {
+            font-size: 40px;
+            color: #f4a51c;
+            margin-bottom: 10px;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .gallery-card:hover .overlay i {
+            transform: translateY(0);
+        }
+
+        .gallery-card .overlay h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.1s;
+            opacity: 0;
+        }
+
+        .gallery-card:hover .overlay h3 {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .gallery-card .overlay p {
+            font-size: 13px;
+            color: #d4e8d0;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            margin-top: 5px;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.2s;
+            opacity: 0;
+        }
+
+        .gallery-card:hover .overlay p {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background: #1a5c3a;
@@ -616,6 +744,12 @@
         }
 
         /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .left-navbar {
                 width: 60px;
@@ -726,6 +860,27 @@
                 padding: 6px 15px;
                 white-space: normal;
                 margin-top: -8px;
+            }
+
+            .gallery-section {
+                padding: 20px 15px 30px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .gallery-card .overlay h3 {
+                font-size: 15px;
+            }
+
+            .gallery-card .overlay p {
+                font-size: 11px;
+            }
+
+            .gallery-card .overlay i {
+                font-size: 30px;
             }
 
             .footer-container {
@@ -840,6 +995,32 @@
             .award-badge {
                 font-size: 11px;
                 padding: 4px 12px;
+            }
+
+            .gallery-section {
+                padding: 15px 10px 20px;
+            }
+
+            .gallery-section .section-title {
+                font-size: 24px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .gallery-card .overlay h3 {
+                font-size: 12px;
+            }
+
+            .gallery-card .overlay p {
+                font-size: 10px;
+            }
+
+            .gallery-card .overlay i {
+                font-size: 22px;
+                margin-bottom: 4px;
             }
 
             .footer {
@@ -973,22 +1154,18 @@
         <!-- ===== CHAIRMAN SECTION ===== -->
         <section class="chairman-section">
             <div class="container">
-                <h2 class="section-title">📌  -  (عام آدمی پاکستان) چیئرمین</h2>
+                <h2 class="section-title">📌 چیئرمین - AamadmiPakistan (عام آدمی پاکستان)</h2>
                 
                 <div class="chairman-content">
-                    <!-- Left Side: Image with Award Badge -->
                     <div class="chairman-image-wrapper">
                         <div class="chairman-image">
-                            <!-- Yahan apni image lagaen (chairman.jpg) -->
                             <img src="chairman.jpg" alt="Chairman - LT COL AKBAR BUTT" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'placeholder-img\'><i class=\'fas fa-user-tie\'></i></div>'">
                         </div>
-                        <!-- Award Badge at Bottom -->
                         <div class="award-badge">
                             <i class="fas fa-star"></i> تمغہ امتیاز (ملٹری)
                         </div>
                     </div>
 
-                    <!-- Right Side: Text -->
                     <div class="chairman-text">
                         <h3 class="name">LT COL AKBAR BUTT</h3>
                         <p class="designation">بانی اور چیئرمین - AamadmiPakistan</p>
@@ -1001,6 +1178,128 @@
                             وہ عوام کی آواز کو مضبوط کرنے اور انہیں بااختیار بنانے کے لیے پرعزم ہیں۔
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALLERY SECTION ===== -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">🖼️ ہماری گیلری</h2>
+                
+                <div class="gallery-grid">
+                    
+                    <!-- Row 1 -->
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400" alt="Gallery 1">
+                        <div class="overlay">
+                            <i class="fas fa-camera"></i>
+                            <h3>پاکستان کی ترقی</h3>
+                            <p>جدید انفراسٹرکچر کی تعمیر</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400" alt="Gallery 2">
+                        <div class="overlay">
+                            <i class="fas fa-users"></i>
+                            <h3>عوام کا اجتماع</h3>
+                            <p>اتحاد اور یکجہتی کا مظاہرہ</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400" alt="Gallery 3">
+                        <div class="overlay">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>تعلیم کا فروغ</h3>
+                            <p>ہر بچے کو تعلیم کا حق</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400" alt="Gallery 4">
+                        <div class="overlay">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <h3>غربت کا خاتمہ</h3>
+                            <p>ہر پاکستانی کو بنیادی حقوق</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=400" alt="Gallery 5">
+                        <div class="overlay">
+                            <i class="fas fa-tree"></i>
+                            <h3>سبز پاکستان</h3>
+                            <p>ماحولیاتی تحفظ اور سرسبزی</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400" alt="Gallery 6">
+                        <div class="overlay">
+                            <i class="fas fa-handshake"></i>
+                            <h3>عوامی خدمت</h3>
+                            <p>عوام کے مسائل کا حل</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=400" alt="Gallery 7">
+                        <div class="overlay">
+                            <i class="fas fa-heart"></i>
+                            <h3>فلاحی کام</h3>
+                            <p>غریبوں کی خدمت</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=400" alt="Gallery 8">
+                        <div class="overlay">
+                            <i class="fas fa-flag"></i>
+                            <h3>قومی یکجہتی</h3>
+                            <p>پاکستان کا مستقبل</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=400" alt="Gallery 9">
+                        <div class="overlay">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>روزگار کے مواقع</h3>
+                            <p>نوجوانوں کے لیے روزگار</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400" alt="Gallery 10">
+                        <div class="overlay">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>انصاف کا نظام</h3>
+                            <p>شفاف اور منصفانہ نظام</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400" alt="Gallery 11">
+                        <div class="overlay">
+                            <i class="fas fa-people-arrows"></i>
+                            <h3>عوام کا ساتھ</h3>
+                            <p>ہر طبقے کو ساتھ لے کر چلنا</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400" alt="Gallery 12">
+                        <div class="overlay">
+                            <i class="fas fa-star"></i>
+                            <h3>خوشحال پاکستان</h3>
+                            <p>ترقی یافتہ اور خوشحال پاکستان</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
