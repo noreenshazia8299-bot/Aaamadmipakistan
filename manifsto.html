@@ -406,7 +406,7 @@
             padding: 20px 30px 30px;
         }
 
-        /* ===== RTL MANIFESTO POINTS - Number Left, Urdu Text Right ===== */
+        /* ===== MANIFESTO POINTS - Text Left, Number Right ===== */
         .manifesto-point {
             display: flex;
             gap: 15px;
@@ -414,10 +414,11 @@
             background: #f8f9fa;
             border-radius: 10px;
             margin-bottom: 8px;
-            border-left: 4px solid #f4a51c;  /* Left border for RTL */
-            align-items: flex-start;
+            border-right: 4px solid #f4a51c;
+            align-items: center;
             transition: all 0.2s ease;
-            direction: rtl;  /* Right to Left */
+            direction: ltr;
+            justify-content: space-between;
         }
 
         .manifesto-point:hover {
@@ -437,19 +438,18 @@
             font-size: 14px;
             font-weight: 700;
             flex-shrink: 0;
-            margin-top: 2px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            order: 1;  /* Number on right side */
+            order: 1;
         }
 
         .manifesto-point .point-text {
             font-size: 16px;
-            line-height: 1.9;
+            line-height: 1.8;
             color: #333;
             font-family: 'Noto Nastaliq Urdu', serif;
-            text-align: right;  /* Urdu text right aligned */
+            text-align: right;
             flex: 1;
-            order: 0;  /* Text on left side */
+            order: 0;
         }
 
         .manifesto-point .point-text strong {
@@ -788,7 +788,7 @@
             .manifesto-point {
                 padding: 8px 10px;
                 gap: 10px;
-                flex-direction: row;
+                flex-wrap: wrap;
             }
 
             .manifesto-point .point-number {
@@ -799,7 +799,7 @@
 
             .manifesto-point .point-text {
                 font-size: 13px;
-                line-height: 1.8;
+                line-height: 1.7;
             }
         }
     </style>
@@ -928,404 +928,403 @@
                             <!-- Point 1 -->
                             <div class="manifesto-point">
                                 <span class="point-text">حکومتی ایوانوں میں مکمل سادگی اختیار کی جائے گی۔</span>
-                                                                <span class="point-number">1</span>
-
+                                <span class="point-number">1</span>
                             </div>
 
                             <!-- Point 2 -->
                             <div class="manifesto-point">
-                                <span class="point-number">2</span>
                                 <span class="point-text">حکومتی عہدیداروں کیلئے ٹریفک کنٹرول پر مکمل لازم ہوگا۔ چاہے وہ وزیر اعظم یا صدر ہی کیوں نہ ہوں۔</span>
+                                <span class="point-number">2</span>
                             </div>
 
                             <!-- Point 3 -->
                             <div class="manifesto-point">
-                                <span class="point-number">3</span>
                                 <span class="point-text">بیرون ملک سے آئے ہوئے حکومتی عہدیدار یا دورے سے مہمان جن کی سیکیورٹی ضروری ہوگی، ان کیلئے ٹریفک کنٹرول کرنا لازم نہیں ہوگا۔ یہ فیصلہ ریاست کے سیکورٹی ادارے کریں گے۔</span>
+                                <span class="point-number">3</span>
                             </div>
 
                             <!-- Point 4 -->
                             <div class="manifesto-point">
-                                <span class="point-number">4</span>
                                 <span class="point-text">بیرون ملک سے لائے والے تمام تحفے کوئی بھی حکمران یا حکومتی ایوان کا کوئی بھی عہدیدار پوری یا آدھی قیمت پر بھی نہیں خرید سکے گا۔ ان کی نیلامی ہوگی اور نیلامی کی رقم قومی میڈیا پر عوام کو دکھائی جائے گی۔</span>
+                                <span class="point-number">4</span>
                             </div>
 
                             <!-- Point 5 -->
                             <div class="manifesto-point">
-                                <span class="point-number">5</span>
                                 <span class="point-text">حکومتی عہدیداروں کی سیکیورٹی پر کم از کم خرچ کیا جائے گا۔ اس سلسلے میں سیکورٹی اداروں کی رہنمائی پر عمل کیا جائے گا۔</span>
+                                <span class="point-number">5</span>
                             </div>
 
                             <!-- Point 6 -->
                             <div class="manifesto-point">
-                                <span class="point-number">6</span>
                                 <span class="point-text">سابقہ وزیراعظم، صدر، گورنر، وزراء اعلیٰ کی کوئی بھی ذاتی قسم کی مراعات، سیکورٹی، میڈیکل یا کوئی سفری اخراجات نہیں ملیں گے۔</span>
+                                <span class="point-number">6</span>
                             </div>
 
                             <!-- Point 7 -->
                             <div class="manifesto-point">
-                                <span class="point-number">7</span>
                                 <span class="point-text">صوبائی اور وفاقی اسمبلی کے اجلاسوں کیلئے کوئی TA/DA نہیں ہوگا، صرف رہائش کی سہولت ریاست کی طرف سے دی جائے گی۔</span>
+                                <span class="point-number">7</span>
                             </div>
 
                             <!-- Point 8 -->
                             <div class="manifesto-point">
-                                <span class="point-number">8</span>
                                 <span class="point-text">تمام صوبائی اور وفاقی وزراء کیلئے 10 مرلے سے زیادہ رہائش گاہ نہیں ہوگی۔ بجلی اور گیس کی حد مقرر کر دی جائے گی۔</span>
+                                <span class="point-number">8</span>
                             </div>
 
                             <!-- Point 9 -->
                             <div class="manifesto-point">
-                                <span class="point-number">9</span>
                                 <span class="point-text">تمام حکومتی عہدیداران بشمول منسٹرز کو اکانومی کلاس میں سفر کریں گے۔</span>
+                                <span class="point-number">9</span>
                             </div>
 
                             <!-- Point 10 -->
                             <div class="manifesto-point">
-                                <span class="point-number">10</span>
                                 <span class="point-text">کوئی بھی وفاقی یا صوبائی وزیر، منسٹر، مشیر، گورنر شاہانہ انداز استعمال نہیں کریں گے۔ وزیراعظم، صدر اور سیکورٹی اداروں کے سربراہان بلٹ پروف گاڑی استعمال کریں گے۔</span>
+                                <span class="point-number">10</span>
                             </div>
 
                             <!-- Point 11 -->
                             <div class="manifesto-point">
-                                <span class="point-number">11</span>
                                 <span class="point-text">کسی بھی سرکاری افسر کی رہائش گاہ ایک کنال سے زیادہ نہیں ہوگی، بشمول چیف سیکریٹری، آئی جی پولیس۔</span>
+                                <span class="point-number">11</span>
                             </div>
 
                             <!-- Point 12 -->
                             <div class="manifesto-point">
-                                <span class="point-number">12</span>
                                 <span class="point-text">کوئی بھی سرکاری ملازم دو عہدوں سے پنشن نہیں لے سکے گا۔</span>
+                                <span class="point-number">12</span>
                             </div>
 
                             <!-- Point 13 -->
                             <div class="manifesto-point">
-                                <span class="point-number">13</span>
                                 <span class="point-text">کسی بھی سرکاری افسر کو سرکاری یا ذاتی استعمال کیلئے سیکورٹی کے علاوہ کوئی اضافی گاڑی نہیں دی جائے گی۔</span>
+                                <span class="point-number">13</span>
                             </div>
 
                             <!-- Point 14 -->
                             <div class="manifesto-point">
-                                <span class="point-number">14</span>
                                 <span class="point-text">کوئی بھی حکومتی یا سرکاری عہدیدار اپنی فیملی یا بچوں کیلئے سرکاری گاڑی استعمال نہیں کریں گے۔</span>
+                                <span class="point-number">14</span>
                             </div>
 
                             <!-- Point 15 -->
                             <div class="manifesto-point">
-                                <span class="point-number">15</span>
                                 <span class="point-text">بیوروکریسی پر خرچے سے عوام کو آگاہ کیا جائے گا۔</span>
+                                <span class="point-number">15</span>
                             </div>
 
                             <!-- Point 16 -->
                             <div class="manifesto-point">
-                                <span class="point-number">16</span>
                                 <span class="point-text">تمام سرکاری افسران روزانہ تین گھنٹے عوام کے مسائل سننے کیلئے اپنے دفاتر کے دروازے کھلے رکھیں گے۔</span>
+                                <span class="point-number">16</span>
                             </div>
 
                             <!-- Point 17 -->
                             <div class="manifesto-point">
-                                <span class="point-number">17</span>
                                 <span class="point-text">دفاتر کے اوقات کے بعد کوئی ذاتی مہمان نہیں ہوگا۔</span>
+                                <span class="point-number">17</span>
                             </div>
 
                             <!-- Point 18 -->
                             <div class="manifesto-point">
-                                <span class="point-number">18</span>
                                 <span class="point-text">ٹیکس وصول کرنے والے سرکاری ملازمین کو مناسب انسینٹو دیا جائے گا۔</span>
+                                <span class="point-number">18</span>
                             </div>
 
                             <!-- Point 19 -->
                             <div class="manifesto-point">
-                                <span class="point-number">19</span>
                                 <span class="point-text">پاکستان کے ہر گاؤں میں کم از کم ایک پارک ضرور بنایا جائے گا۔</span>
+                                <span class="point-number">19</span>
                             </div>
 
                             <!-- Point 20 -->
                             <div class="manifesto-point">
-                                <span class="point-number">20</span>
                                 <span class="point-text">ملک میں بلدیاتی نظام کو مضبوط سے مضبوط بنایا جائے گا۔</span>
+                                <span class="point-number">20</span>
                             </div>
 
                             <!-- Point 21 -->
                             <div class="manifesto-point">
-                                <span class="point-number">21</span>
                                 <span class="point-text">کسی بھی سرکاری ملازم کو اس کی مرضی کے بغیر نوکری سے نہیں نکالا جائے گا۔</span>
+                                <span class="point-number">21</span>
                             </div>
 
                             <!-- Point 22 -->
                             <div class="manifesto-point">
-                                <span class="point-number">22</span>
                                 <span class="point-text">عدلیہ میں ہائی کورٹ اور سپریم کورٹ سے آگے ادارے نہیں بنائے جائیں گے۔</span>
+                                <span class="point-number">22</span>
                             </div>
 
                             <!-- Point 23 -->
                             <div class="manifesto-point">
-                                <span class="point-number">23</span>
                                 <span class="point-text">وفاقی آئینی عدالت، ٹریبونلز کو ختم کیا جائے گا۔</span>
+                                <span class="point-number">23</span>
                             </div>
 
                             <!-- Point 24 -->
                             <div class="manifesto-point">
-                                <span class="point-number">24</span>
                                 <span class="point-text">چیف جسٹس آف پاکستان مکمل طور پر آزاد ہوگا۔</span>
+                                <span class="point-number">24</span>
                             </div>
 
                             <!-- Point 25 -->
                             <div class="manifesto-point">
-                                <span class="point-number">25</span>
                                 <span class="point-text">سپریم کورٹ اور ہائی کورٹ کے سینئر موسٹ جج کو چیف جسٹس بنایا جائے گا۔</span>
+                                <span class="point-number">25</span>
                             </div>
 
                             <!-- Point 26 -->
                             <div class="manifesto-point">
-                                <span class="point-number">26</span>
                                 <span class="point-text">الیکشن لڑنا آسان ہوگا، پیسے کا عمل دخل مکمل طور پر ختم کیا جائے گا۔</span>
+                                <span class="point-number">26</span>
                             </div>
 
                             <!-- Point 27 -->
                             <div class="manifesto-point">
-                                <span class="point-number">27</span>
                                 <span class="point-text">تمام اداروں کے سربراہوں کی تعیناتی میرٹ کی بنیاد پر ہوگی۔</span>
+                                <span class="point-number">27</span>
                             </div>
 
                             <!-- Point 28 -->
                             <div class="manifesto-point">
-                                <span class="point-number">28</span>
                                 <span class="point-text">سرکاری اداروں میں عوام کے گلے شیشے کے پیچھے سے کھانے پینے پر مکمل پابندی ہوگی۔</span>
+                                <span class="point-number">28</span>
                             </div>
 
                             <!-- Point 29 -->
                             <div class="manifesto-point">
-                                <span class="point-number">29</span>
                                 <span class="point-text">عوام کے گلے شیشے کے پیچھے سے دفاتر میں چائے بھی نہیں پلائی جائے گی۔</span>
+                                <span class="point-number">29</span>
                             </div>
 
                             <!-- Point 30 -->
                             <div class="manifesto-point">
-                                <span class="point-number">30</span>
                                 <span class="point-text">ہر پرائیویٹ سکول، کالج اور یونیورسٹیوں میں عام عوام کے بچوں کیلئے مخصوص کوٹہ ہوگا۔</span>
+                                <span class="point-number">30</span>
                             </div>
 
                             <!-- Point 31 -->
                             <div class="manifesto-point">
-                                <span class="point-number">31</span>
                                 <span class="point-text">انفرادی جائے گی اور ان کی بھی ضبطی کی جائے گی۔</span>
+                                <span class="point-number">31</span>
                             </div>
 
                             <!-- Point 32 -->
                             <div class="manifesto-point">
-                                <span class="point-number">32</span>
                                 <span class="point-text">ہر اسٹیشن میں سرکاری ملازمین کیلئے سرکاری رہائش میں شاہانہ مزہ نہیں دیا جائے گا۔</span>
+                                <span class="point-number">32</span>
                             </div>
 
                             <!-- Point 33 -->
                             <div class="manifesto-point">
-                                <span class="point-number">33</span>
                                 <span class="point-text">عوام کو تمام پوش علاقوں اور سرکاری سوسائٹیز میں رسائی فراہم کی جائے گی۔</span>
+                                <span class="point-number">33</span>
                             </div>
 
                             <!-- Point 34 -->
                             <div class="manifesto-point">
-                                <span class="point-number">34</span>
                                 <span class="point-text">پولیس اور دیگر متعلقہ اہلکاروں کو بہتر یونیفارم فراہم کی جائیں گی۔</span>
+                                <span class="point-number">34</span>
                             </div>
 
                             <!-- Point 35 -->
                             <div class="manifesto-point">
-                                <span class="point-number">35</span>
                                 <span class="point-text">تمام سرکاری اداروں کے ملازمین عوام کو جناب یا سر کہہ کر مخاطب کریں گے۔</span>
+                                <span class="point-number">35</span>
                             </div>
 
                             <!-- Point 36 -->
                             <div class="manifesto-point">
-                                <span class="point-number">36</span>
                                 <span class="point-text">اساتذہ کی گاڑیوں پر سرکاری نمبر پلیٹ ہوگی۔</span>
+                                <span class="point-number">36</span>
                             </div>
 
                             <!-- Point 37 -->
                             <div class="manifesto-point">
-                                <span class="point-number">37</span>
                                 <span class="point-text">اساتذہ کو لیپ ٹاپ فراہم کرنا لازم ہوگا۔</span>
+                                <span class="point-number">37</span>
                             </div>
 
                             <!-- Point 38 -->
                             <div class="manifesto-point">
-                                <span class="point-number">38</span>
                                 <span class="point-text">ضلع کی حیثیت ختم کی جائے گی۔</span>
+                                <span class="point-number">38</span>
                             </div>
 
                             <!-- Point 39 -->
                             <div class="manifesto-point">
-                                <span class="point-number">39</span>
                                 <span class="point-text">زرعی رقبے کو کمرشل تعمیرات کی اجازت نہیں ہوگی۔</span>
+                                <span class="point-number">39</span>
                             </div>
 
                             <!-- Point 40 -->
                             <div class="manifesto-point">
-                                <span class="point-number">40</span>
                                 <span class="point-text">تمام شہرِ پاکستان میں ایک خاص حد تک اونچے گھر بنائے جائیں گے۔</span>
+                                <span class="point-number">40</span>
                             </div>
 
                             <!-- Point 41 -->
                             <div class="manifesto-point">
-                                <span class="point-number">41</span>
                                 <span class="point-text">الیکشن میں ہر قسم کی اشتہاری مہم پر پابندی ہوگی۔</span>
+                                <span class="point-number">41</span>
                             </div>
 
                             <!-- Point 42 -->
                             <div class="manifesto-point">
-                                <span class="point-number">42</span>
                                 <span class="point-text">ہر قسم کے جلسے اور ان کی کارروائی میڈیا پر براہِ راست دکھائی جائے گی۔</span>
+                                <span class="point-number">42</span>
                             </div>
 
                             <!-- Point 43 -->
                             <div class="manifesto-point">
-                                <span class="point-number">43</span>
                                 <span class="point-text">نئی نسل کو آگے بڑھانے کیلئے ضلعی سطح پر علماء کی کمیٹی بنائی جائے گی۔</span>
+                                <span class="point-number">43</span>
                             </div>
 
                             <!-- Point 44 -->
                             <div class="manifesto-point">
-                                <span class="point-number">44</span>
                                 <span class="point-text">قرض اور معیشت کو مکمل ختم کرنے کی کوشش کی جائے گی۔</span>
+                                <span class="point-number">44</span>
                             </div>
 
                             <!-- Point 45 -->
                             <div class="manifesto-point">
-                                <span class="point-number">45</span>
                                 <span class="point-text">پورے ملک میں انٹی کرپشن کو ختم کرنے کی کوشش کی جائے گی۔</span>
+                                <span class="point-number">45</span>
                             </div>
 
                             <!-- Point 46 -->
                             <div class="manifesto-point">
-                                <span class="point-number">46</span>
                                 <span class="point-text">عام آدمی کے منشور پر عمل نہ ہونے کی صورت میں حکومت سے بھیکڑی اختیار کر لی جائے گی۔</span>
+                                <span class="point-number">46</span>
                             </div>
 
                             <!-- Point 47 -->
                             <div class="manifesto-point">
-                                <span class="point-number">47</span>
                                 <span class="point-text">ہر طرح کا الیکشن بروقت کروایا جائے گا۔</span>
+                                <span class="point-number">47</span>
                             </div>
 
                             <!-- Point 48 -->
                             <div class="manifesto-point">
-                                <span class="point-number">48</span>
                                 <span class="point-text">ہر ضلع کی سطح پر جدید سہولیات اور فرانزک لیبز فراہم کی جائیں گی۔</span>
+                                <span class="point-number">48</span>
                             </div>
 
                             <!-- Point 49 -->
                             <div class="manifesto-point">
-                                <span class="point-number">49</span>
                                 <span class="point-text">پولیس ملازمین کے لیے ضلعی سطح پر ہسپتال تعمیر کیے جائیں گے۔</span>
+                                <span class="point-number">49</span>
                             </div>
 
                             <!-- Point 50 -->
                             <div class="manifesto-point">
-                                <span class="point-number">50</span>
                                 <span class="point-text">پولیس ملازمین کے بچوں کی تعلیم اور ٹرانسپورٹ مفت دی جائے گی۔</span>
+                                <span class="point-number">50</span>
                             </div>
 
                             <!-- Point 51 -->
                             <div class="manifesto-point">
-                                <span class="point-number">51</span>
                                 <span class="point-text">پولیس ملازمین کے لیے رہائشی کالونیز بنائی جائیں گی۔</span>
+                                <span class="point-number">51</span>
                             </div>
 
                             <!-- Point 52 -->
                             <div class="manifesto-point">
-                                <span class="point-number">52</span>
                                 <span class="point-text">ہر پولیس اسٹیشن میں بارہ ڈیوٹی سینٹری ورکر اور دو سپاہی تعینات ہوں گے۔</span>
+                                <span class="point-number">52</span>
                             </div>
 
                             <!-- Point 53 -->
                             <div class="manifesto-point">
-                                <span class="point-number">53</span>
                                 <span class="point-text">ایک حوالات میں پانچ سے زیادہ لوگ نہیں رکھے جائیں گے۔</span>
+                                <span class="point-number">53</span>
                             </div>
 
                             <!-- Point 54 -->
                             <div class="manifesto-point">
-                                <span class="point-number">54</span>
                                 <span class="point-text">ہر پولیس اسٹیشن میں ایک ہی انٹری ہوگی۔</span>
+                                <span class="point-number">54</span>
                             </div>
 
                             <!-- Point 55 -->
                             <div class="manifesto-point">
-                                <span class="point-number">55</span>
                                 <span class="point-text">ہر پولیس اہلکار گھر کے اندر داخل نہیں ہوگا، سوائے انتہائی دہشت گردی کے۔</span>
+                                <span class="point-number">55</span>
                             </div>
 
                             <!-- Point 56 -->
                             <div class="manifesto-point">
-                                <span class="point-number">56</span>
                                 <span class="point-text">سرکاری عمارتوں کا افتتاح کام شروع کرنے ہی کیا جائے گا۔</span>
+                                <span class="point-number">56</span>
                             </div>
 
                             <!-- Point 57 -->
                             <div class="manifesto-point">
-                                <span class="point-number">57</span>
                                 <span class="point-text">کسی بھی حکمران کی تصویر عوام کے پیسے سے نہیں لگائی جائے گی۔</span>
+                                <span class="point-number">57</span>
                             </div>
 
                             <!-- Point 58 -->
                             <div class="manifesto-point">
-                                <span class="point-number">58</span>
                                 <span class="point-text">کسی عمارت کا نام کسی عوامی نمائندے کے نام پر نہیں رکھا جائے گا۔</span>
+                                <span class="point-number">58</span>
                             </div>
 
                             <!-- Point 59 -->
                             <div class="manifesto-point">
-                                <span class="point-number">59</span>
                                 <span class="point-text">تمام عمارتوں کے نام تبدیل کیے جائیں گے اور عوام کی رضامندی سے تبدیلی لائی جائے گی۔</span>
+                                <span class="point-number">59</span>
                             </div>
 
                             <!-- Point 60 -->
                             <div class="manifesto-point">
-                                <span class="point-number">60</span>
                                 <span class="point-text">ڈریپ یا ڈرائی پورٹ کے قوانین طاقتور افراد استعمال نہیں کر سکیں گے۔</span>
+                                <span class="point-number">60</span>
                             </div>
 
                             <!-- Point 61 -->
                             <div class="manifesto-point">
-                                <span class="point-number">61</span>
                                 <span class="point-text">جنگلات اور باغات کی سطح پر غریب لوگوں کو ڈیوٹی آفر کی جائے گی۔</span>
+                                <span class="point-number">61</span>
                             </div>
 
                             <!-- Point 62 -->
                             <div class="manifesto-point">
-                                <span class="point-number">62</span>
                                 <span class="point-text">تعلیم ریاست کی طرف سے دی جائے گی، میٹرک تک تعلیم لازمی ہوگی۔</span>
+                                <span class="point-number">62</span>
                             </div>
 
                             <!-- Point 63 -->
                             <div class="manifesto-point">
-                                <span class="point-number">63</span>
                                 <span class="point-text">ریاست کی پالیسی سیکورٹی اداروں کی مشاورت سے ترتیب دی جائے گی۔</span>
+                                <span class="point-number">63</span>
                             </div>
 
                             <!-- Point 64 -->
                             <div class="manifesto-point">
-                                <span class="point-number">64</span>
                                 <span class="point-text">پولیس کو سیاست سے مکمل آزاد کیا جائے گا۔</span>
+                                <span class="point-number">64</span>
                             </div>
 
                             <!-- Point 65 -->
                             <div class="manifesto-point">
-                                <span class="point-number">65</span>
                                 <span class="point-text">عوام کا پیسہ کھانے پر سزاۓ موت یا عمر قید کا قانون بنایا جائے گا۔</span>
+                                <span class="point-number">65</span>
                             </div>
 
                             <!-- Point 66 -->
                             <div class="manifesto-point">
-                                <span class="point-number">66</span>
                                 <span class="point-text">حکومت اور ریاستی اداروں کا رویہ عوام کے ساتھ اچھا ہونا چاہیے۔</span>
+                                <span class="point-number">66</span>
                             </div>
 
                             <!-- Point 67 -->
                             <div class="manifesto-point">
-                                <span class="point-number">67</span>
                                 <span class="point-text">ہر عوامی نمائندے کے پاس اپنے علاقے کے تمام میئرز کا ریکارڈ موجود ہوگا۔</span>
+                                <span class="point-number">67</span>
                             </div>
 
                         </div>
